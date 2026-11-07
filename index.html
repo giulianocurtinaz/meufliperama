@@ -3,111 +3,153 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meu Fliperama — jogos feitos por gente de verdade</title>
-<meta name="description" content="Meu Fliperama: um fliperama aberto onde qualquer pessoa pode criar seus jogos em Python e publicar para todo mundo jogar. Em breve.">
-<meta name="theme-color" content="#0b0716">
+<title>Meu Fliperama — aqui quem cria o jogo é você!</title>
+<meta name="description" content="O Fliperama do Infonotas: o dev júnior cria seus próprios jogos conversando com a IA e aprende noções de programação brincando.">
+<meta name="theme-color" content="#7c4dff">
 <meta property="og:title" content="Meu Fliperama">
-<meta property="og:description" content="Um fliperama aberto: crie seu jogo, publique, chame os amigos. Em breve.">
+<meta property="og:description" content="Crie seu jogo, aprenda programação brincando e publique na vitrine do fliperama.">
 <meta property="og:url" content="https://meufliperama.com.br/">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fontes/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fontes/fredoka-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<div class="crt" aria-hidden="true"></div>
 
 <header class="topo">
-  <a class="marca" href="#inicio">MEU<span>FLIPERAMA</span></a>
+  <a class="marca" href="#inicio" aria-label="Meu Fliperama, início">
+    <span class="logo" aria-hidden="true">🕹️</span> Meu <b>Fliperama</b>
+  </a>
   <nav>
-    <a href="#como">Como funciona</a>
-    <a href="#publicar">Publicar jogo</a>
-    <a href="#placar">Placar</a>
+    <a href="#o-que-e">O que é</a>
+    <a href="#como">Como nasce um jogo</a>
+    <a href="#aprende">O que se aprende</a>
+    <a href="#familias">Famílias</a>
   </nav>
+  <a class="btn btn-entrar js-entrar" href="#entrar">Entrar</a>
 </header>
 
 <main id="inicio">
+
   <section class="hero">
-    <div class="marquise">
-      <p class="pre">★ FLIPERAMA ABERTO ★</p>
-      <h1>MEU<br><em>FLIPERAMA</em></h1>
-      <p class="slogan">Jogos feitos por gente de verdade.<br>Crie o seu, publique e chame os amigos.</p>
-    </div>
-
-    <div class="gabinete">
-      <div class="tela">
-        <canvas id="demo" width="320" height="240" aria-label="Demonstração animada de um jogo de naves"></canvas>
-        <p class="insira" id="insira">INSIRA UMA FICHA</p>
-      </div>
-      <div class="painel">
-        <span class="manche" aria-hidden="true"></span>
-        <button class="botao vermelho" id="ficha" type="button">FICHA</button>
-        <button class="botao amarelo" id="start" type="button">START</button>
+    <div class="hero-texto">
+      <p class="selo">Fliperama do Infonotas</p>
+      <h1>Aqui quem cria o jogo é <span class="arco">você!</span></h1>
+      <p class="sub">Escolha uma época, um tipo de jogo e conte a sua ideia. A inteligência artificial ajuda a montar, você testa, muda o que quiser e publica para os amigos jogarem. Brincando assim, o <b>dev júnior</b> aprende os primeiros passos da programação.</p>
+      <div class="acoes">
+        <a class="btn btn-grande js-entrar" href="#entrar">🎮 Entrar no Fliperama</a>
+        <a class="btn btn-claro" href="#como">Como funciona?</a>
       </div>
     </div>
+    <div class="hero-arte" aria-hidden="true">
+      <div class="nuvem n1"></div><div class="nuvem n2"></div>
+      <div class="maquina">
+        <div class="maquina-topo">MEU FLIPERAMA</div>
+        <div class="maquina-tela">
+          <span class="px p1">👾</span><span class="px p2">⭐</span><span class="px p3">🚀</span><span class="px p4">🍄</span>
+        </div>
+        <div class="maquina-painel"><i></i><b></b><b class="b2"></b></div>
+      </div>
+    </div>
+  </section>
 
-    <p class="status"><span class="pisca">●</span> Em construção — as primeiras máquinas ligam em breve</p>
+  <section id="o-que-e" class="bloco">
+    <h2>O que é o Fliperama do Infonotas?</h2>
+    <div class="duas">
+      <p>O <b>Infonotas</b> é um sistema que já ajuda empresas de transporte a criar seus próprios aplicativos com a ajuda da IA. O <b>Fliperama</b> é o cantinho de jogos dele: uma tela onde, em vez de relatórios, a gente cria <b>jogos</b>.</p>
+      <p>Cada jogo começa por um <b>assistente</b> que faz três perguntas: a época, o gênero e a ideia. Depois é só conversar com a IA para ajustar — e, quando ficar bom, publicar na <b>vitrine</b>, onde todo mundo da casa pode jogar.</p>
+    </div>
+    <p class="destaque">O Meu Fliperama roda num servidor de casa, o <b>macserver</b>. Este site é a porta de entrada.</p>
   </section>
 
   <section id="como" class="bloco">
-    <h2><span>01</span> Como funciona</h2>
-    <ol class="passos">
-      <li>
-        <b class="icone" aria-hidden="true">⌨</b>
-        <h3>Crie</h3>
-        <p>Escreva seu jogo em Python direto no navegador. Não precisa instalar nada no seu computador.</p>
-      </li>
-      <li>
-        <b class="icone" aria-hidden="true">⬆</b>
-        <h3>Publique</h3>
-        <p>Com um clique o jogo vira uma máquina nova no salão do fliperama, com nome, autor e capa.</p>
-      </li>
-      <li>
-        <b class="icone" aria-hidden="true">♛</b>
-        <h3>Jogue</h3>
-        <p>Qualquer pessoa entra, escolhe uma máquina e joga. Os recordes ficam no placar de cada jogo.</p>
-      </li>
+    <h2>Como nasce um jogo</h2>
+    <ol class="trilha">
+      <li class="c1"><span class="num">1</span><h3>Escolha a época</h3><p>Anos 80 com pixels grandes? Anos 90 com mais cores? Você decide o estilo.</p></li>
+      <li class="c2"><span class="num">2</span><h3>Escolha o gênero</h3><p>Nave, plataforma, corrida, labirinto, quebra-cabeça…</p></li>
+      <li class="c3"><span class="num">3</span><h3>Conte a sua ideia</h3><p>“Um gato astronauta que pega peixes no espaço e foge dos meteoros.”</p></li>
+      <li class="c4"><span class="num">4</span><h3>Converse e ajuste</h3><p>“Deixa o gato mais rápido.” “Coloca 3 vidas.” Teste, mude, teste de novo.</p></li>
+      <li class="c5"><span class="num">5</span><h3>Publique na vitrine</h3><p>Seu jogo vira uma máquina do fliperama para os amigos jogarem.</p></li>
     </ol>
+    <p class="dica">💡 Estragou alguma coisa? Sem problema: dá para <b>voltar para uma versão anterior</b> do jogo a qualquer momento.</p>
   </section>
 
-  <section id="publicar" class="bloco">
-    <h2><span>02</span> Quem pode publicar</h2>
-    <div class="cartoes">
-      <article>
-        <h3>Quem está aprendendo</h3>
-        <p>Programar fica mais divertido quando outras pessoas jogam o que você fez. Do primeiro jogo da cobrinha ao primeiro chefão.</p>
-      </article>
-      <article>
-        <h3>Famílias e escolas</h3>
-        <p>Um lugar para mostrar os projetos da turma ou de casa, com um endereço próprio para cada jogo.</p>
-      </article>
-      <article>
-        <h3>Quem já programa</h3>
-        <p>Faça protótipos rápidos, participe de desafios e deixe seu jogo no salão para a comunidade.</p>
-      </article>
+  <section id="aprende" class="bloco">
+    <h2>O que o dev júnior aprende</h2>
+    <p class="intro">Todo jogo é feito de regras. Ao pedir mudanças e ver o resultado, a criança descobre como os programas pensam:</p>
+    <div class="cartas">
+      <article><span>📦</span><h3>Variáveis</h3><p>Pontos, vidas e velocidade são caixinhas que guardam números que mudam durante o jogo.</p></article>
+      <article><span>🔀</span><h3>Condições</h3><p><i>Se</i> a nave encostar no meteoro, perde uma vida. <i>Senão</i>, continua voando.</p></article>
+      <article><span>🔁</span><h3>Repetição</h3><p>O jogo é um laço que se repete muitas vezes por segundo: mexe, confere, desenha.</p></article>
+      <article><span>⌨️</span><h3>Eventos</h3><p>Apertar uma tecla ou tocar na tela é um evento. O programa “escuta” e reage.</p></article>
+      <article><span>🐞</span><h3>Encontrar erros</h3><p>Quando algo sai errado, a gente investiga, descobre a causa e conserta. Isso se chama depurar.</p></article>
+      <article><span>⏪</span><h3>Versões</h3><p>Guardar cada passo e poder voltar no tempo. Os programadores de verdade trabalham assim.</p></article>
+      <article><span>💬</span><h3>Explicar com clareza</h3><p>Para a IA entender, é preciso dizer exatamente o que se quer. Pensar passo a passo é programar.</p></article>
+      <article><span>🔬</span><h3>Testar e melhorar</h3><p>Jogar o próprio jogo, ver o que está chato ou difícil demais e ajustar.</p></article>
+    </div>
+  </section>
+
+  <section id="laboratorio" class="bloco lab">
+    <h2>Experimente: o Pega-estrelas</h2>
+    <p class="intro">Mexa a cestinha com as setas (ou tocando na tela) e veja, ao lado, qual regra do código está funcionando em cada momento.</p>
+    <div class="lab-grade">
+      <div class="lab-jogo">
+        <canvas id="jogo" width="360" height="300" tabindex="0" aria-label="Jogo Pega-estrelas: mova a cesta para pegar estrelas e fugir das nuvens de chuva"></canvas>
+        <div class="lab-botoes">
+          <button type="button" class="btn btn-claro" id="esq" aria-label="Mover para a esquerda">◀</button>
+          <button type="button" class="btn" id="comecar">▶ Jogar</button>
+          <button type="button" class="btn btn-claro" id="dir" aria-label="Mover para a direita">▶</button>
+        </div>
+      </div>
+      <pre class="codigo" aria-label="Regras do jogo escritas como código"><code><span class="cm"># regras do Pega-estrelas</span>
+<span class="ln" data-l="var">pontos = 0
+vidas = 3</span>
+
+<span class="ln" data-l="loop">enquanto vidas &gt; 0:</span>
+<span class="ln" data-l="tecla">    se apertou a seta:
+        mover a cesta</span>
+<span class="ln" data-l="estrela">    se a estrela caiu na cesta:
+        pontos = pontos + 1</span>
+<span class="ln" data-l="chuva">    se a nuvem de chuva caiu na cesta:
+        vidas = vidas - 1</span>
+
+<span class="ln" data-l="fim">mostrar "Fim de jogo!"</span></code></pre>
+    </div>
+  </section>
+
+  <section id="familias" class="bloco">
+    <h2>Para famílias e educadores</h2>
+    <div class="cartas tres">
+      <article><span>🏠</span><h3>Feito em casa</h3><p>O fliperama roda num servidor próprio, de casa. Os jogos ficam lá, não numa rede social.</p></article>
+      <article><span>🔐</span><h3>Entrada com conta</h3><p>Para criar e jogar é preciso entrar com usuário e senha do Infonotas.</p></article>
+      <article><span>🍪</span><h3>Sem rastreamento</h3><p>Este site não usa cookies, anúncios nem ferramentas de rastreamento.</p></article>
     </div>
   </section>
 
   <section id="placar" class="bloco">
-    <h2><span>03</span> Placar de lançamento</h2>
-    <table class="tabela-placar">
-      <thead><tr><th>Pos.</th><th>Etapa</th><th>Situação</th></tr></thead>
-      <tbody>
-        <tr><td>1º</td><td>Portal no ar</td><td class="ok">CONCLUÍDO</td></tr>
-        <tr><td>2º</td><td>Servidor do salão ligado</td><td class="vai">EM ANDAMENTO</td></tr>
-        <tr><td>3º</td><td>Editor de jogos no navegador</td><td class="vai">EM ANDAMENTO</td></tr>
-        <tr><td>4º</td><td>Primeiras máquinas publicadas</td><td>AGUARDANDO</td></tr>
-        <tr><td>5º</td><td>Salão aberto ao público</td><td>AGUARDANDO</td></tr>
-      </tbody>
-    </table>
+    <h2>Placar de lançamento</h2>
+    <ul class="placar">
+      <li class="ok"><b>✔</b> Fliperama dentro do Infonotas</li>
+      <li class="ok"><b>✔</b> Portal meufliperama.com.br</li>
+      <li class="vai"><b>⏳</b> Servidor de casa (macserver) ligado</li>
+      <li><b>○</b> Acesso pela internet</li>
+      <li><b>○</b> Primeiros jogos na vitrine</li>
+    </ul>
+  </section>
+
+  <section id="entrar" class="bloco entrar">
+    <h2>Pronto para jogar?</h2>
+    <p class="js-entrar-texto">A porta do fliperama abre em breve. Enquanto isso, vá pensando na ideia do seu primeiro jogo!</p>
+    <a class="btn btn-grande js-entrar" href="#entrar">🎮 Entrar no Fliperama</a>
   </section>
 </main>
 
 <footer class="rodape">
-  <p>GAME OVER? Nunca. <span class="pisca">_</span></p>
-  <p>Um projeto de <a href="https://giuliano.curtinaz.com.br/">Giuliano Curtinaz</a> · Sem cookies, sem rastreamento.</p>
+  <p>Meu Fliperama · um projeto de <a href="https://giuliano.curtinaz.com.br/">Giuliano Curtinaz</a> feito com o Infonotas</p>
+  <p class="mini">Sem cookies, sem rastreamento.</p>
 </footer>
 
-<script src="demo.js"></script>
+<script src="config.js"></script>
+<script src="site.js"></script>
 </body>
 </html>
