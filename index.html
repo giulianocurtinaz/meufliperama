@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu Fliperama — jogos feitos por gente de verdade</title>
+<meta name="description" content="Meu Fliperama: um fliperama aberto onde qualquer pessoa pode criar seus jogos em Python e publicar para todo mundo jogar. Em breve.">
+<meta name="theme-color" content="#0b0716">
+<meta property="og:title" content="Meu Fliperama">
+<meta property="og:description" content="Um fliperama aberto: crie seu jogo, publique, chame os amigos. Em breve.">
+<meta property="og:url" content="https://meufliperama.com.br/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fontes/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+
+<header class="topo">
+  <a class="marca" href="#inicio">MEU<span>FLIPERAMA</span></a>
+  <nav>
+    <a href="#como">Como funciona</a>
+    <a href="#publicar">Publicar jogo</a>
+    <a href="#placar">Placar</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="marquise">
+      <p class="pre">★ FLIPERAMA ABERTO ★</p>
+      <h1>MEU<br><em>FLIPERAMA</em></h1>
+      <p class="slogan">Jogos feitos por gente de verdade.<br>Crie o seu, publique e chame os amigos.</p>
+    </div>
+
+    <div class="gabinete">
+      <div class="tela">
+        <canvas id="demo" width="320" height="240" aria-label="Demonstração animada de um jogo de naves"></canvas>
+        <p class="insira" id="insira">INSIRA UMA FICHA</p>
+      </div>
+      <div class="painel">
+        <span class="manche" aria-hidden="true"></span>
+        <button class="botao vermelho" id="ficha" type="button">FICHA</button>
+        <button class="botao amarelo" id="start" type="button">START</button>
+      </div>
+    </div>
+
+    <p class="status"><span class="pisca">●</span> Em construção — as primeiras máquinas ligam em breve</p>
+  </section>
+
+  <section id="como" class="bloco">
+    <h2><span>01</span> Como funciona</h2>
+    <ol class="passos">
+      <li>
+        <b class="icone" aria-hidden="true">⌨</b>
+        <h3>Crie</h3>
+        <p>Escreva seu jogo em Python direto no navegador. Não precisa instalar nada no seu computador.</p>
+      </li>
+      <li>
+        <b class="icone" aria-hidden="true">⬆</b>
+        <h3>Publique</h3>
+        <p>Com um clique o jogo vira uma máquina nova no salão do fliperama, com nome, autor e capa.</p>
+      </li>
+      <li>
+        <b class="icone" aria-hidden="true">♛</b>
+        <h3>Jogue</h3>
+        <p>Qualquer pessoa entra, escolhe uma máquina e joga. Os recordes ficam no placar de cada jogo.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="publicar" class="bloco">
+    <h2><span>02</span> Quem pode publicar</h2>
+    <div class="cartoes">
+      <article>
+        <h3>Quem está aprendendo</h3>
+        <p>Programar fica mais divertido quando outras pessoas jogam o que você fez. Do primeiro jogo da cobrinha ao primeiro chefão.</p>
+      </article>
+      <article>
+        <h3>Famílias e escolas</h3>
+        <p>Um lugar para mostrar os projetos da turma ou de casa, com um endereço próprio para cada jogo.</p>
+      </article>
+      <article>
+        <h3>Quem já programa</h3>
+        <p>Faça protótipos rápidos, participe de desafios e deixe seu jogo no salão para a comunidade.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="placar" class="bloco">
+    <h2><span>03</span> Placar de lançamento</h2>
+    <table class="tabela-placar">
+      <thead><tr><th>Pos.</th><th>Etapa</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr><td>1º</td><td>Portal no ar</td><td class="ok">CONCLUÍDO</td></tr>
+        <tr><td>2º</td><td>Servidor do salão ligado</td><td class="vai">EM ANDAMENTO</td></tr>
+        <tr><td>3º</td><td>Editor de jogos no navegador</td><td class="vai">EM ANDAMENTO</td></tr>
+        <tr><td>4º</td><td>Primeiras máquinas publicadas</td><td>AGUARDANDO</td></tr>
+        <tr><td>5º</td><td>Salão aberto ao público</td><td>AGUARDANDO</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>GAME OVER? Nunca. <span class="pisca">_</span></p>
+  <p>Um projeto de <a href="https://giuliano.curtinaz.com.br/">Giuliano Curtinaz</a> · Sem cookies, sem rastreamento.</p>
+</footer>
+
+<script src="demo.js"></script>
+</body>
+</html>
