@@ -3,5 +3,5 @@
 // coloque aqui o endereço de login. Enquanto estiver vazio, os botões "Entrar"
 // mostram "em breve".
 window.FLIPERAMA = {
-  entrar: ""   // ex.: "https://jogar.meufliperama.com.br/#tela=fliperama"
+  entrar: "https://jogar.meufliperama.com.br/#tela=fliperama"
 };
