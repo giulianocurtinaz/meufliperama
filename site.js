@@ -8,7 +8,7 @@
     else { a.classList.add("embreve"); a.href = "#entrar"; }
   });
   var t = document.querySelector(".js-entrar-texto");
-  if (url && t) t.textContent = "Recebeu convite? Digite seu e-mail, use o código que chegar nele e depois entre com seu usuário do Infonotas.";
+  if (url && t) t.textContent = "Recebeu convite? Digite seu e-mail, use o código que chegar nele e pronto: você entra direto no fliperama.";
 
   // ---------- Pega-estrelas ----------
   var cv = document.getElementById("jogo");
