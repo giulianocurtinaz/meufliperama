@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>atravesse a rua · Meu Fliperama</title>
-<script src="/estudio/fliperama/motor.js?v=0.9.9"></script>
+<script src="/estudio/fliperama/motor.js?v=0.9.9-f03f56"></script>
 <style>
   html, body { background: #000; margin: 0; height: 100%; }
   #jogo { width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
@@ -16,13 +16,16 @@
 <body>
 <a id="voltar" href="/jogos/">← Jogos</a>
 <div id="jogo"><div id="aviso">carregando o jogo…</div></div>
+
 <script>
 (async function () {
   var raiz = document.getElementById('jogo');
   var spec = {"sons": {"musicas": {"tema": {"bpm": 150, "canais": ["E5 - G5 - A5 - G5 E5 C5 - D5 - E5 - - -", "C3 - C3 - F3 - F3 - G3 - G3 - C3 - - -", "C5 - - - F4 - - - G4 - - - C5 - - -"]}}}, "cores": {"fundo": "#0F380F", "texto": "#9BBC0F", "apagado": "#306230", "destaque": "#8BAC0F"}, "fases": [{"ceu": "#8BAC0F", "mapa": ["gFggFggFggFggFggFggg", "wwLLLwwwwLLLwwwwLLLw", "wKKKKwwwKKKKwwwKKKKw", "wwwwwLLLwwwLLLwwwLLL", "wwwwKKKKwwwwKKKKwwww", "LLLwwLLLwwLLLwwLLLww", "wwwwwwKKKKwwwKKKKwww", "gggggggggggggogggggg", "ErrrrrErrrrEErrrrEEr", "rVrrrrrVrrrrrrVrrrrr", "rrErrrrrErrrrEErrrrr", "VrrrrrrVrrrrrVrrrrVr", "rrErrrrErrrrErrrrEEr", "rrrrVrrrrrrVrrrrrrVr", "gggggggggg@ggggggggg"], "nome": "Cidade", "musica": "tema"}, {"ceu": "#8BAC0F", "mapa": ["gFggFggFggFggFggFggg", "wwwwLLLwwLLLwwLLLwwL", "wKKKwwwwKKKwwwwKKKww", "wwwwLLLwwwLLLwwwLLLw", "wwwwwwKKKKwwwKKKKwww", "wLLLwwwwLLLwwwwLLLww", "wwwwwwKKKKwwwKKKKwww", "gggggggggggggogggggg", "rrrrErrrrrEErrrrrEEr", "rrVrrrrrVVrrrrVrrrrV", "rrErrrrErrrrrEErrrEr", "rrrrVrrrrVrrrrrrVrrr", "ErrrrrrErrrrrErrrrEr", "rrVrrrrrrVrrrrrrVVrr", "gggggggggg@ggggggggg"], "nome": "Cidade 2", "musica": "tema"}, {"ceu": "#8BAC0F", "mapa": ["gFggFggFggFggFggFggg", "LLLwwLLLwwLLLwwLLLww", "KKKKwwwKKKKwwwKKKKww", "LLLwwLLLwwLLLwwLLLww", "wwwKKKwwKKKwwKKKwwKK", "wwwwwLLLLwwLLLLwwLLL", "wwwwwKKKwwwKKKwwwKKK", "gggggggggggggggggggg", "rrrErrrrrrEErrrrErrr", "rrVrrrrrrVrrrrVrrrrr", "rrErrrrrErrrrrrErrrr", "VrrrrrVrrrrrrVVrrrrr", "rErrrrErrrrrrErrrrrE", "VrrrrrrVrrrrrVrrrrrV", "gggggggggg@ggggggggg"], "nome": "Cidade 3", "musica": "tema"}], "heroi": {"vidas": 3, "sprite": "heroi", "velocidade": 1.0}, "tiles": {"g": {"cor": "#8BAC0F", "solido": false}, "r": {"cor": "#306230", "solido": false}, "w": {"cor": "#306230", "mortal": true, "solido": false}}, "perfil": "portatil", "textos": {"ideia": "", "vitoria": "VOCE CONSEGUIU!", "subtitulo": "ATRAVESSE A RUA E O RIO"}, "titulo": "atravesse a rua", "sprites": {"item": {"h": 6, "w": 8, "cores": ["#8BAC0F", "#0F380F"], "quadros": [["..111..1", ".11121.1", "11111111", "11111111", ".1111..1", "..111..."]]}, "alien": {"h": 7, "w": 8, "cores": ["#0F380F", "#306230", "#9BBC0F"], "quadros": [["..1111..", ".222222.", ".212112.", ".121121.", ".122221.", ".222222.", "........"], ["..1111..", ".222222.", ".212112.", ".121121.", ".122221.", ".12..21.", "........"]]}, "carro": {"h": 5, "w": 8, "cores": ["#0F380F", "#306230", "#9BBC0F"], "quadros": [["........", ".123121.", "12222221", "12222221", ".1....1."]]}, "gosma": {"h": 5, "w": 8, "cores": ["#0F380F", "#306230", "#9BBC0F"], "quadros": [["........", "..1221..", ".222222.", ".222222.", "11111111"], ["........", "..1111..", ".222222.", "12222221", "11111111"]]}, "heroi": {"h": 8, "w": 8, "cores": ["#0F380F", "#306230", "#9BBC0F"], "quadros": [[".1....1.", ".221122.", ".222222.", "12222221", "12211221", ".112211.", ".122221.", ".11..11."], [".1....1.", ".221122.", ".222222.", "12222221", "12211221", ".112211.", ".122221.", "..1..1.."]]}, "carro2": {"h": 5, "w": 8, "cores": ["#0F380F", "#306230", "#9BBC0F"], "quadros": [["........", ".123121.", "12222221", "12222221", ".1....1."]]}, "tronco": {"h": 6, "w": 8, "cores": ["#306230", "#0F380F"], "quadros": [["22222222", "11112111", "12111111", "11111211", "11211111", "22222222"]]}, "bandeira": {"h": 8, "w": 4, "cores": ["#306230", "#9BBC0F", "#0F380F"], "quadros": [["2111", "2111", "2...", "2...", "2...", "2...", "2...", "2..."]]}}, "vitoria": {"tipo": "terminar_fases"}, "montagem": {"por": "regras", "tom": "alegre", "heroi": "gato", "cenario": "cidade", "objetivo": "fim", "dificuldade": "normal"}, "arquetipo": "travessia", "entidades": {"E": {"tipo": "inimigo", "pontos": 0, "sprite": "carro", "velocidade": 0.6, "comportamento": "faixa"}, "F": {"tipo": "fim_de_fase", "sprite": "bandeira"}, "K": {"tipo": "carona", "sprite": "tronco", "velocidade": 0.66, "comportamento": "faixa"}, "L": {"tipo": "carona", "sprite": "tronco", "velocidade": 0.48, "comportamento": "faixa"}, "V": {"tipo": "inimigo", "pontos": 0, "sprite": "carro2", "velocidade": 0.85, "comportamento": "faixa"}, "o": {"tipo": "coletavel", "pontos": 200, "sprite": "item"}}, "versao_esquema": 1};
   try {
-    var perfis = await fetch('/estudio/fliperama/perfis.json?v=0.9.9').then(function (x) { return x.json(); });
-    window.__fliperama = Fliperama.iniciar(raiz, spec, { perfis: perfis, slug: "atravesse-a-rua", placar: false });
+    var perfis = await fetch('/estudio/fliperama/perfis.json?v=0.9.9-f03f56').then(function (x) { return x.json(); });
+    var opcoesPlacar = { perfis: perfis, slug: "atravesse-a-rua", placar: false };
+
+    window.__fliperama = Fliperama.iniciar(raiz, spec, opcoesPlacar);
   } catch (e) {
     raiz.innerHTML = '<div id="aviso">O jogo não abriu: ' + String(e && e.message || e).replace(/[<>&]/g, '') + '</div>';
   }

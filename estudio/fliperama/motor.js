@@ -5139,7 +5139,26 @@
     // 🏆 placar (E6): grava a partida e manda para a casa no fim — só no jogo de verdade (com slug), nunca no robô
     var grav = null, estadoAntes = jogo.estado;
     function token() { try { return localStorage.getItem('token') || ''; } catch (e) { return ''; } }
+    // 🌐 12/11/2026 (placar público, sem conta): opcoes.placarPublico = base das rotas públicas (ex.: '/publico/fliperama');
+    // opcoes.pedirApelido(corpo) → Promise<{apelido, turnstile?}|null> (a PÁGINA pergunta; null = não mandar);
+    // opcoes.aoPlacar(resposta) avisa a página do resultado (inclusive {erro}). Só rede: a simulação e o replay não mudam.
+    var PUB = opcoes.placarPublico || null;
+    function placarPublico(caminho, corpo) {
+      caminho = caminho.replace('/estudio/fliperama', PUB);
+      var envio = !corpo ? fetch(caminho)
+        : Promise.resolve(opcoes.pedirApelido ? opcoes.pedirApelido(corpo) : null).then(function (extra) {
+            if (!extra || !extra.apelido) { return null; }
+            for (var k in extra) { if (Object.prototype.hasOwnProperty.call(extra, k)) { corpo[k] = extra[k]; } }
+            return fetch(caminho, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(corpo) });
+          });
+      return envio.then(function (r) {
+        if (!r) { return null; }
+        return r.json().then(function (j) { return r.ok ? j : { erro: (j && j.detail) || ('erro ' + r.status) }; }, function () { return r.ok ? {} : { erro: 'erro ' + r.status }; });
+      }).then(function (j) { if (corpo && opcoes.aoPlacar) { try { opcoes.aoPlacar(j); } catch (e) { /* nunca derruba o jogo */ } } return j && j.erro ? null : j; })
+        .catch(function () { return null; });
+    }
     function placarApi(caminho, corpo) {
+      if (PUB && opcoes.slug && typeof fetch === 'function') { return placarPublico(caminho, corpo); }
       if (!opcoes.slug || !token() || typeof fetch !== 'function') { return Promise.resolve(null); }
       return fetch(caminho, corpo ? { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token() }, body: JSON.stringify(corpo) }
                                : { headers: { Authorization: 'Bearer ' + token() } })
