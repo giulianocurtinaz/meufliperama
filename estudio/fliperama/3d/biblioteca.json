@@ -1,0 +1,1880 @@
+{
+ "versao": 2,
+ "fontes": {
+  "quaternius": {
+   "nome": "Quaternius — Platformer Game Kit / Modular Platformer / Easy Enemy",
+   "licenca": "CC0-1.0",
+   "url": "https://quaternius.com"
+  },
+  "kenney": {
+   "nome": "Kenney — Starter Kit 3D Platformer (modelos)",
+   "licenca": "CC0-1.0",
+   "url": "https://kenney.nl/assets/platformer-kit"
+  },
+  "kaykit": {
+   "nome": "KayKit — Platformer Pack 1.0 (Kay Lousberg)",
+   "licenca": "CC0-1.0",
+   "url": "https://kaylousberg.itch.io/kaykit-platformer"
+  },
+  "quaternius2": {
+   "nome": "Quaternius — Modular Men/Women, Animals, Dinosaurs, Mech, Spaceships, Ships",
+   "licenca": "CC0-1.0",
+   "url": "https://quaternius.com"
+  },
+  "kaykit2": {
+   "nome": "KayKit — Adventurers 1.0 e Skeletons 1.0 (Kay Lousberg)",
+   "licenca": "CC0-1.0",
+   "url": "https://kaylousberg.itch.io"
+  },
+  "kenney_car": {
+   "nome": "Kenney — Car Kit",
+   "licenca": "CC0-1.0",
+   "url": "https://kenney.nl/assets/car-kit"
+  }
+ },
+ "personagens": {
+  "aventureiro_3d": {
+   "nome": "Aventureiro 3D",
+   "papel": "heroi",
+   "arquivo": "personagens/aventureiro.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "CharacterArmature|Idle",
+    "anda": "CharacterArmature|Run",
+    "pulo": "CharacterArmature|Jump_Idle",
+    "morto": "CharacterArmature|Death",
+    "vitoria": "CharacterArmature|Wave",
+    "dano": "CharacterArmature|HitReact"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "robozinho_3d": {
+   "nome": "Robozinho (Kenney)",
+   "papel": "heroi",
+   "arquivo": "personagens/kenney_character.glb",
+   "fonte": "kenney",
+   "anims": {
+    "parado": "idle",
+    "anda": "walk",
+    "pulo": "jump"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "monstrinho": {
+   "nome": "Monstrinho",
+   "papel": "inimigo",
+   "arquivo": "personagens/monstrinho.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "MonsterArmature|Idle",
+    "anda": "MonsterArmature|Walk",
+    "pulo": "MonsterArmature|Jump",
+    "morto": "MonsterArmature|Death"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "abelha_3d": {
+   "nome": "Abelha",
+   "papel": "inimigo",
+   "arquivo": "personagens/abelha.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "MonsterArmature|Flying",
+    "anda": "MonsterArmature|Flying",
+    "voa": "MonsterArmature|Flying",
+    "morto": "MonsterArmature|Death"
+   },
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "caranguejo": {
+   "nome": "Caranguejo",
+   "papel": "inimigo",
+   "arquivo": "personagens/caranguejo.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "MonsterArmature|Idle",
+    "anda": "MonsterArmature|Walk",
+    "morto": "MonsterArmature|Death"
+   },
+   "altura": 0.8,
+   "giro": 0,
+   "grupo": "monstro"
+  },
+  "sapo_3d": {
+   "nome": "Sapo",
+   "papel": "inimigo",
+   "arquivo": "personagens/sapo.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "FrogArmature|Frog_Idle",
+    "anda": "FrogArmature|Frog_Jump",
+    "pulo": "FrogArmature|Frog_Jump",
+    "morto": "FrogArmature|Frog_Death"
+   },
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "rato_3d": {
+   "nome": "Rato",
+   "papel": "inimigo",
+   "arquivo": "personagens/rato.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "RatArmature|Rat_Idle",
+    "anda": "RatArmature|Rat_Walk",
+    "morto": "RatArmature|Rat_Death"
+   },
+   "altura": 0.7,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "cobra": {
+   "nome": "Cobra",
+   "papel": "inimigo",
+   "arquivo": "personagens/cobra.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "SnakeArmature|Snake_Idle",
+    "anda": "SnakeArmature|Snake_Walk"
+   },
+   "altura": 0.7,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "cobra_brava": {
+   "nome": "Cobra brava",
+   "papel": "inimigo",
+   "arquivo": "personagens/cobra_brava.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "SnakeArmature|Snake_Idle",
+    "anda": "SnakeArmature|Snake_Walk"
+   },
+   "altura": 0.7,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "vespa": {
+   "nome": "Vespa",
+   "papel": "inimigo",
+   "arquivo": "personagens/vespa.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "WaspArmature|Wasp_Flying",
+    "anda": "WaspArmature|Wasp_Flying",
+    "voa": "WaspArmature|Wasp_Flying",
+    "morto": "WaspArmature|Wasp_Death"
+   },
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "aranha": {
+   "nome": "Aranha",
+   "papel": "inimigo",
+   "arquivo": "personagens/aranha.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "SpiderArmature|Spider_Idle",
+    "anda": "SpiderArmature|Spider_Walk",
+    "pulo": "SpiderArmature|Spider_Jump",
+    "morto": "SpiderArmature|Spider_Death"
+   },
+   "altura": 0.75,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "aranha_rainha": {
+   "nome": "Aranha-rainha (chefe)",
+   "papel": "chefe",
+   "arquivo": "personagens/aranha.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "SpiderArmature|Spider_Idle",
+    "anda": "SpiderArmature|Spider_Walk",
+    "pulo": "SpiderArmature|Spider_Jump",
+    "morto": "SpiderArmature|Spider_Death"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "cor": "#B060F0",
+   "grupo": "monstro"
+  },
+  "monstro_rei": {
+   "nome": "Monstro-rei (chefe)",
+   "papel": "chefe",
+   "arquivo": "personagens/monstrinho.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "MonsterArmature|Idle",
+    "anda": "MonsterArmature|Walk",
+    "pulo": "MonsterArmature|Jump",
+    "morto": "MonsterArmature|Death"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "cor": "#F05050",
+   "grupo": "monstro"
+  },
+  "serra_3d": {
+   "nome": "Serra",
+   "papel": "inimigo",
+   "arquivo": "personagens/serra.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.9,
+   "giro": 0,
+   "gira": "z",
+   "grupo": "monstro"
+  },
+  "bola_espinhos": {
+   "nome": "Bola de espinhos",
+   "papel": "inimigo",
+   "arquivo": "personagens/bola_espinhos.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "z",
+   "grupo": "monstro"
+  },
+  "canhao": {
+   "nome": "Canhão",
+   "papel": "inimigo",
+   "arquivo": "personagens/canhao.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "moeda_3d": {
+   "nome": "Moeda",
+   "papel": "item",
+   "arquivo": "itens/moeda.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "moeda_kenney": {
+   "nome": "Moeda (Kenney)",
+   "papel": "item",
+   "arquivo": "itens/kenney_coin.glb",
+   "fonte": "kenney",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "gema_azul_3d": {
+   "nome": "Gema azul",
+   "papel": "item",
+   "arquivo": "itens/gema_azul.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "gema_verde_3d": {
+   "nome": "Gema verde",
+   "papel": "item",
+   "arquivo": "itens/gema_verde.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "gema_rosa_3d": {
+   "nome": "Gema rosa",
+   "papel": "item",
+   "arquivo": "itens/gema_rosa.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "estrela_3d": {
+   "nome": "Estrela",
+   "papel": "poder",
+   "arquivo": "itens/estrela.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.9,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "poder"
+  },
+  "coracao_3d": {
+   "nome": "Coração",
+   "papel": "poder",
+   "arquivo": "itens/coracao.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "poder"
+  },
+  "cogumelo_3d": {
+   "nome": "Cogumelo",
+   "papel": "poder",
+   "arquivo": "itens/cogumelo.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.9,
+   "giro": 0,
+   "grupo": "poder"
+  },
+  "chave_3d": {
+   "nome": "Chave",
+   "papel": "item",
+   "arquivo": "itens/chave.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "raio": {
+   "nome": "Raio",
+   "papel": "poder",
+   "arquivo": "itens/raio.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.9,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "poder"
+  },
+  "fruta": {
+   "nome": "Fruta",
+   "papel": "item",
+   "arquivo": "itens/fruta.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.7,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "diamante_kaykit": {
+   "nome": "Diamante (KayKit)",
+   "papel": "item",
+   "arquivo": "itens/kaykit_diamond_blue.gltf",
+   "fonte": "kaykit",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 0,
+   "gira": "y",
+   "grupo": "item"
+  },
+  "bandeira_3d": {
+   "nome": "Bandeira",
+   "papel": "fim",
+   "arquivo": "itens/bandeira.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 2.0,
+   "giro": 90,
+   "grupo": "fim"
+  },
+  "bandeira_kenney": {
+   "nome": "Bandeira (Kenney)",
+   "papel": "fim",
+   "arquivo": "itens/kenney_flag.glb",
+   "fonte": "kenney",
+   "anims": {},
+   "altura": 2.0,
+   "giro": 90,
+   "grupo": "fim"
+  },
+  "chegada_kaykit": {
+   "nome": "Placa de chegada (KayKit)",
+   "papel": "fim",
+   "arquivo": "itens/kaykit_signage_finish.gltf",
+   "fonte": "kaykit",
+   "anims": {},
+   "altura": 2.0,
+   "giro": 0,
+   "grupo": "fim"
+  },
+  "plataforma_3d": {
+   "nome": "Plataforma que anda",
+   "papel": "plataforma",
+   "arquivo": "itens/plataforma.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.5,
+   "giro": 0,
+   "grupo": "plataforma"
+  },
+  "mola_3d": {
+   "nome": "Mola",
+   "papel": "item",
+   "arquivo": "itens/mola.glb",
+   "fonte": "quaternius",
+   "anims": {
+    "parado": "BouncerArmature|Bouncer_Idle"
+   },
+   "altura": 0.8,
+   "giro": 0,
+   "grupo": "item"
+  },
+  "bala_canhao": {
+   "nome": "Bala de canhão",
+   "papel": "tiro",
+   "arquivo": "itens/bala.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.6,
+   "giro": 0,
+   "grupo": "tiro"
+  },
+  "bomba_3d": {
+   "nome": "Bomba",
+   "papel": "tiro",
+   "arquivo": "itens/bomba.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 0.7,
+   "giro": 0,
+   "grupo": "tiro"
+  },
+  "pessoa_aventureiro": {
+   "nome": "Aventureiro de mochila",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_aventureiro.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_rei": {
+   "nome": "Rei",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_rei.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_astronauta": {
+   "nome": "Astronauta",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_astronauta.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_fazendeiro": {
+   "nome": "Fazendeiro",
+   "papel": "pessoa",
+   "arquivo": "pessoas/pessoa_fazendeiro.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_policial": {
+   "nome": "Policial",
+   "papel": "pessoa",
+   "arquivo": "pessoas/pessoa_policial.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_menino": {
+   "nome": "Menino",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_menino.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_punk": {
+   "nome": "Punk (valentão)",
+   "papel": "inimigo",
+   "arquivo": "pessoas/pessoa_punk.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_operario": {
+   "nome": "Operário",
+   "papel": "pessoa",
+   "arquivo": "pessoas/pessoa_operario.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_guerreira": {
+   "nome": "Guerreira",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_guerreira.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_bruxa": {
+   "nome": "Bruxa",
+   "papel": "inimigo",
+   "arquivo": "pessoas/pessoa_bruxa.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_cientista": {
+   "nome": "Cientista do espaço",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_cientista.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_soldada": {
+   "nome": "Soldada",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_soldada.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_exploradora": {
+   "nome": "Exploradora",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_exploradora.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_menina": {
+   "nome": "Menina",
+   "papel": "heroi",
+   "arquivo": "pessoas/pessoa_menina.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "pessoa_punk2": {
+   "nome": "Punk (valentona)",
+   "papel": "inimigo",
+   "arquivo": "pessoas/pessoa_punk2.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "cavaleiro_3d": {
+   "nome": "Cavaleiro",
+   "papel": "heroi",
+   "arquivo": "pessoas/cavaleiro_3d.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "barbaro_3d": {
+   "nome": "Bárbaro",
+   "papel": "heroi",
+   "arquivo": "pessoas/barbaro_3d.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "maga_3d": {
+   "nome": "Mago",
+   "papel": "heroi",
+   "arquivo": "pessoas/maga_3d.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "ladino_3d": {
+   "nome": "Ladino",
+   "papel": "heroi",
+   "arquivo": "pessoas/ladino_3d.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "ladino_capuz_3d": {
+   "nome": "Ladino de capuz",
+   "papel": "heroi",
+   "arquivo": "pessoas/ladino_capuz_3d.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "pessoa"
+  },
+  "esqueleto_guerreiro": {
+   "nome": "Esqueleto guerreiro",
+   "papel": "inimigo",
+   "arquivo": "pessoas/esqueleto_guerreiro.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "esqueleto": {
+   "nome": "Esqueleto",
+   "papel": "inimigo",
+   "arquivo": "pessoas/esqueleto.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "esqueleto_ladino": {
+   "nome": "Esqueleto ladino",
+   "papel": "inimigo",
+   "arquivo": "pessoas/esqueleto_ladino.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "esqueleto_mago": {
+   "nome": "Esqueleto mago",
+   "papel": "inimigo",
+   "arquivo": "pessoas/esqueleto_mago.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "monstro"
+  },
+  "esqueleto_rei": {
+   "nome": "Esqueleto-rei (chefe)",
+   "papel": "chefe",
+   "arquivo": "pessoas/esqueleto_guerreiro.glb",
+   "fonte": "kaykit2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "monstro",
+   "cor": "#F0C040"
+  },
+  "robo_george": {
+   "nome": "Robô George",
+   "papel": "heroi",
+   "arquivo": "pessoas/robo_george.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "robo"
+  },
+  "robo_leela": {
+   "nome": "Robô Leela",
+   "papel": "heroi",
+   "arquivo": "pessoas/robo_leela.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "robo"
+  },
+  "robo_mike": {
+   "nome": "Robô Mike",
+   "papel": "inimigo",
+   "arquivo": "pessoas/robo_mike.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "robo"
+  },
+  "robo_stan": {
+   "nome": "Robô Stan",
+   "papel": "inimigo",
+   "arquivo": "pessoas/robo_stan.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "vitoria": "Cheer",
+    "dano": "Hit",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "robo"
+  },
+  "raposa": {
+   "nome": "Raposa",
+   "papel": "bicho",
+   "arquivo": "bichos/raposa.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "lobo": {
+   "nome": "Lobo",
+   "papel": "bicho",
+   "arquivo": "bichos/lobo.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "cavalo": {
+   "nome": "Cavalo",
+   "papel": "bicho",
+   "arquivo": "bichos/cavalo.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "vaca": {
+   "nome": "Vaca",
+   "papel": "bicho",
+   "arquivo": "bichos/vaca.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "touro": {
+   "nome": "Touro",
+   "papel": "bicho",
+   "arquivo": "bichos/touro.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "cervo": {
+   "nome": "Cervo",
+   "papel": "bicho",
+   "arquivo": "bichos/cervo.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "cachorro": {
+   "nome": "Cachorro",
+   "papel": "bicho",
+   "arquivo": "bichos/cachorro.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "alpaca": {
+   "nome": "Alpaca",
+   "papel": "bicho",
+   "arquivo": "bichos/alpaca.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 0.9,
+   "giro": 90,
+   "grupo": "bicho"
+  },
+  "trex": {
+   "nome": "Tiranossauro",
+   "papel": "chefe",
+   "arquivo": "bichos/trex.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "dino"
+  },
+  "raptor": {
+   "nome": "Velociraptor",
+   "papel": "inimigo",
+   "arquivo": "bichos/raptor.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "dino"
+  },
+  "triceratops": {
+   "nome": "Tricerátops",
+   "papel": "inimigo",
+   "arquivo": "bichos/triceratops.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "dino"
+  },
+  "estegossauro": {
+   "nome": "Estegossauro",
+   "papel": "inimigo",
+   "arquivo": "bichos/estegossauro.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "dino"
+  },
+  "parassaurolofo": {
+   "nome": "Parassaurolofo",
+   "papel": "bicho",
+   "arquivo": "bichos/parassaurolofo.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "dino"
+  },
+  "apatossauro": {
+   "nome": "Apatossauro",
+   "papel": "bicho",
+   "arquivo": "bichos/apatossauro.glb",
+   "fonte": "quaternius2",
+   "anims": {
+    "parado": "Idle",
+    "anda": "Run",
+    "pulo": "Jump",
+    "morto": "Death",
+    "ataque": "Attack"
+   },
+   "altura": 1.0,
+   "giro": 90,
+   "grupo": "dino"
+  },
+  "carro_corrida": {
+   "nome": "Carro de corrida",
+   "papel": "heroi",
+   "arquivo": "veiculos/carro_corrida.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "carro_futuro": {
+   "nome": "Carro do futuro",
+   "papel": "heroi",
+   "arquivo": "veiculos/carro_futuro.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "kart_azul": {
+   "nome": "Kart",
+   "papel": "heroi",
+   "arquivo": "veiculos/kart_azul.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "kart_2": {
+   "nome": "Kart 2",
+   "papel": "heroi",
+   "arquivo": "veiculos/kart_2.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "carro": {
+   "nome": "Carro",
+   "papel": "veiculo",
+   "arquivo": "veiculos/carro.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "carro_esporte": {
+   "nome": "Carro esporte",
+   "papel": "veiculo",
+   "arquivo": "veiculos/carro_esporte.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "carro_hatch": {
+   "nome": "Carrinho",
+   "papel": "veiculo",
+   "arquivo": "veiculos/carro_hatch.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "taxi": {
+   "nome": "Táxi",
+   "papel": "veiculo",
+   "arquivo": "veiculos/taxi.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "policia": {
+   "nome": "Polícia",
+   "papel": "veiculo",
+   "arquivo": "veiculos/policia.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "ambulancia": {
+   "nome": "Ambulância",
+   "papel": "veiculo",
+   "arquivo": "veiculos/ambulancia.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "bombeiros": {
+   "nome": "Caminhão de bombeiros",
+   "papel": "veiculo",
+   "arquivo": "veiculos/bombeiros.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "caminhao": {
+   "nome": "Caminhão",
+   "papel": "veiculo",
+   "arquivo": "veiculos/caminhao.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "caminhao_lixo": {
+   "nome": "Caminhão de lixo",
+   "papel": "veiculo",
+   "arquivo": "veiculos/caminhao_lixo.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "van": {
+   "nome": "Van",
+   "papel": "veiculo",
+   "arquivo": "veiculos/van.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "jipe": {
+   "nome": "Jipe",
+   "papel": "veiculo",
+   "arquivo": "veiculos/jipe.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "trator": {
+   "nome": "Trator",
+   "papel": "veiculo",
+   "arquivo": "veiculos/trator.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "entrega": {
+   "nome": "Furgão de entrega",
+   "papel": "veiculo",
+   "arquivo": "veiculos/entrega.glb",
+   "fonte": "kenney_car",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "carro",
+   "veiculo": "carro"
+  },
+  "nave_striker": {
+   "nome": "Nave Striker",
+   "papel": "heroi",
+   "arquivo": "veiculos/nave_striker.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_spitfire": {
+   "nome": "Nave Spitfire",
+   "papel": "heroi",
+   "arquivo": "veiculos/nave_spitfire.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_challenger": {
+   "nome": "Nave Challenger",
+   "papel": "heroi",
+   "arquivo": "veiculos/nave_challenger.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_bob": {
+   "nome": "Nave Bob",
+   "papel": "inimigo",
+   "arquivo": "veiculos/nave_bob.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_dispatcher": {
+   "nome": "Nave Dispatcher",
+   "papel": "inimigo",
+   "arquivo": "veiculos/nave_dispatcher.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_insurgente": {
+   "nome": "Nave Insurgente",
+   "papel": "inimigo",
+   "arquivo": "veiculos/nave_insurgente.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_omen": {
+   "nome": "Nave Omen",
+   "papel": "inimigo",
+   "arquivo": "veiculos/nave_omen.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "nave_chefe": {
+   "nome": "Nave-chefe",
+   "papel": "chefe",
+   "arquivo": "veiculos/nave_chefe.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "nave",
+   "veiculo": "nave"
+  },
+  "barquinho": {
+   "nome": "Barquinho",
+   "papel": "veiculo",
+   "arquivo": "veiculos/barquinho.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "barco",
+   "veiculo": "barco"
+  },
+  "veleiro": {
+   "nome": "Veleiro",
+   "papel": "veiculo",
+   "arquivo": "veiculos/veleiro.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "barco",
+   "veiculo": "barco"
+  },
+  "bote": {
+   "nome": "Bote",
+   "papel": "veiculo",
+   "arquivo": "veiculos/bote.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "barco",
+   "veiculo": "barco"
+  },
+  "barco_viking": {
+   "nome": "Barco viking",
+   "papel": "veiculo",
+   "arquivo": "veiculos/barco_viking.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "barco",
+   "veiculo": "barco"
+  },
+  "navio_pirata": {
+   "nome": "Navio a vela",
+   "papel": "veiculo",
+   "arquivo": "veiculos/navio_pirata.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "barco",
+   "veiculo": "barco"
+  },
+  "navio": {
+   "nome": "Navio",
+   "papel": "veiculo",
+   "arquivo": "veiculos/navio.glb",
+   "fonte": "quaternius2",
+   "anims": {},
+   "altura": 0.8,
+   "giro": 90,
+   "grupo": "barco",
+   "veiculo": "barco"
+  },
+  "bau_3d": {
+   "nome": "Baú do tesouro",
+   "papel": "fim",
+   "arquivo": "itens/bau.glb",
+   "fonte": "quaternius",
+   "anims": {},
+   "altura": 1.0,
+   "giro": 0,
+   "grupo": "fim"
+  }
+ },
+ "blocos": {
+  "grama_3d": {
+   "nome": "Grama",
+   "fonte": "quaternius",
+   "topo": "blocos/grama.glb",
+   "meio": "blocos/terra.glb"
+  },
+  "terra_3d": {
+   "nome": "Terra",
+   "fonte": "quaternius",
+   "topo": "blocos/terra.glb",
+   "meio": "blocos/terra.glb"
+  },
+  "caixa_surpresa_3d": {
+   "nome": "Caixa ?",
+   "fonte": "quaternius",
+   "topo": "blocos/caixa_surpresa.glb",
+   "meio": "blocos/caixa_surpresa.glb"
+  },
+  "caixa_exclamacao": {
+   "nome": "Caixa !",
+   "fonte": "quaternius",
+   "topo": "blocos/caixa_exclamacao.glb",
+   "meio": "blocos/caixa_exclamacao.glb"
+  },
+  "caixa_usada_3d": {
+   "nome": "Caixa usada",
+   "fonte": "quaternius",
+   "topo": "blocos/caixa_usada.glb",
+   "meio": "blocos/caixa_usada.glb"
+  },
+  "tijolo_3d": {
+   "nome": "Tijolo",
+   "fonte": "quaternius",
+   "topo": "blocos/tijolo.glb",
+   "meio": "blocos/tijolo.glb"
+  },
+  "tijolo_kenney": {
+   "nome": "Tijolo (Kenney)",
+   "fonte": "kenney",
+   "topo": "blocos/kenney_brick.glb",
+   "meio": "blocos/kenney_brick.glb"
+  },
+  "caixa_moeda_kenney": {
+   "nome": "Caixa de moeda (Kenney)",
+   "fonte": "kenney",
+   "topo": "blocos/kenney_block-coin.glb",
+   "meio": "blocos/kenney_block-coin.glb"
+  },
+  "caixote_3d": {
+   "nome": "Caixote",
+   "fonte": "quaternius",
+   "topo": "blocos/caixote.glb",
+   "meio": "blocos/caixote.glb"
+  },
+  "espinhos_3d": {
+   "nome": "Espinhos",
+   "fonte": "quaternius",
+   "topo": "blocos/espinhos.glb",
+   "meio": "blocos/espinhos.glb"
+  },
+  "rocha_grama": {
+   "nome": "Rocha com grama",
+   "fonte": "quaternius",
+   "topo": "blocos/rocha_topo.glb",
+   "meio": "blocos/rocha_meio.glb"
+  },
+  "pedra_3d": {
+   "nome": "Pedra",
+   "fonte": "casa",
+   "topo": null,
+   "meio": null,
+   "procedural": {
+    "cor": "#7E7A8A",
+    "topo": "#A9A4B6"
+   }
+  },
+  "areia_3d": {
+   "nome": "Areia",
+   "fonte": "casa",
+   "topo": null,
+   "meio": null,
+   "procedural": {
+    "cor": "#D9B26A",
+    "topo": "#F0D79A"
+   }
+  },
+  "neve_3d": {
+   "nome": "Neve",
+   "fonte": "casa",
+   "topo": null,
+   "meio": null,
+   "procedural": {
+    "cor": "#B9D3E6",
+    "topo": "#FFFFFF"
+   }
+  },
+  "ponte_3d": {
+   "nome": "Ponte de madeira",
+   "fonte": "kaykit",
+   "topo": "blocos/kaykit_platform_wood_1x1x1.gltf",
+   "meio": "blocos/kaykit_platform_wood_1x1x1.gltf",
+   "fino": true
+  },
+  "bloco_verde": {
+   "nome": "Bloco verde (KayKit)",
+   "fonte": "kaykit",
+   "topo": "blocos/kaykit_platform_1x1x1_green.gltf",
+   "meio": "blocos/kaykit_platform_1x1x1_green.gltf"
+  },
+  "bloco_azul": {
+   "nome": "Bloco azul (KayKit)",
+   "fonte": "kaykit",
+   "topo": "blocos/kaykit_platform_1x1x1_blue.gltf",
+   "meio": "blocos/kaykit_platform_1x1x1_blue.gltf"
+  },
+  "lava_3d": {
+   "nome": "Lava",
+   "fonte": "casa",
+   "topo": null,
+   "meio": null,
+   "procedural": {
+    "cor": "#FF5A1F",
+    "brilho": "#FF9A2E",
+    "liquido": true
+   }
+  },
+  "agua_3d": {
+   "nome": "Água",
+   "fonte": "casa",
+   "topo": null,
+   "meio": null,
+   "procedural": {
+    "cor": "#2E8BFF",
+    "brilho": "#7CC4FF",
+    "liquido": true
+   }
+  },
+  "gelo_3d": {
+   "nome": "Gelo",
+   "fonte": "casa",
+   "topo": null,
+   "meio": null,
+   "procedural": {
+    "cor": "#9FDCF5",
+    "topo": "#E6F8FF"
+   }
+  },
+  "cano_3d": {
+   "nome": "Cano",
+   "fonte": "quaternius",
+   "topo": "blocos/cano.glb",
+   "meio": "blocos/cano.glb"
+  }
+ },
+ "enfeites": {
+  "arvore": {
+   "nome": "Arvore",
+   "fonte": "quaternius",
+   "arquivo": "cenario/tree.glb",
+   "altura": 4.0,
+   "onde": "fundo"
+  },
+  "arvore_fruta": {
+   "nome": "Arvore fruta",
+   "fonte": "quaternius",
+   "arquivo": "cenario/tree_fruit.glb",
+   "altura": 4.0,
+   "onde": "fundo"
+  },
+  "arbusto": {
+   "nome": "Arbusto",
+   "fonte": "quaternius",
+   "arquivo": "cenario/bush.glb",
+   "altura": 1.4,
+   "onde": "fundo"
+  },
+  "arbusto_fruta": {
+   "nome": "Arbusto fruta",
+   "fonte": "quaternius",
+   "arquivo": "cenario/bush_fruit.glb",
+   "altura": 1.4,
+   "onde": "fundo"
+  },
+  "planta_grande": {
+   "nome": "Planta grande",
+   "fonte": "quaternius",
+   "arquivo": "cenario/plant_large.glb",
+   "altura": 1.6,
+   "onde": "frente"
+  },
+  "planta": {
+   "nome": "Planta",
+   "fonte": "quaternius",
+   "arquivo": "cenario/plant_small.glb",
+   "altura": 0.9,
+   "onde": "frente"
+  },
+  "pedra_1": {
+   "nome": "Pedra 1",
+   "fonte": "quaternius",
+   "arquivo": "cenario/rock_1.glb",
+   "altura": 1.2,
+   "onde": "fundo"
+  },
+  "pedra_2": {
+   "nome": "Pedra 2",
+   "fonte": "quaternius",
+   "arquivo": "cenario/rock_2.glb",
+   "altura": 1.0,
+   "onde": "fundo"
+  },
+  "cerca": {
+   "nome": "Cerca",
+   "fonte": "quaternius",
+   "arquivo": "cenario/fence_1.glb",
+   "altura": 1.0,
+   "onde": "fundo"
+  },
+  "torre": {
+   "nome": "Torre",
+   "fonte": "quaternius",
+   "arquivo": "cenario/tower.glb",
+   "altura": 6.0,
+   "onde": "fundo"
+  },
+  "caveira": {
+   "nome": "Caveira",
+   "fonte": "quaternius",
+   "arquivo": "cenario/skull.glb",
+   "altura": 0.8,
+   "onde": "fundo"
+  },
+  "grama_1": {
+   "nome": "Grama 1",
+   "fonte": "quaternius",
+   "arquivo": "cenario/grass_1.glb",
+   "altura": 0.6,
+   "onde": "frente"
+  },
+  "grama_2": {
+   "nome": "Grama 2",
+   "fonte": "quaternius",
+   "arquivo": "cenario/grass_2.glb",
+   "altura": 0.6,
+   "onde": "frente"
+  },
+  "nuvem_1": {
+   "nome": "Nuvem 1",
+   "fonte": "quaternius",
+   "arquivo": "cenario/nuvem_1.glb",
+   "altura": 1.6,
+   "onde": "ceu"
+  },
+  "nuvem_2": {
+   "nome": "Nuvem 2",
+   "fonte": "quaternius",
+   "arquivo": "cenario/nuvem_2.glb",
+   "altura": 1.6,
+   "onde": "ceu"
+  },
+  "nuvem_3": {
+   "nome": "Nuvem 3",
+   "fonte": "quaternius",
+   "arquivo": "cenario/nuvem_3.glb",
+   "altura": 1.6,
+   "onde": "ceu"
+  },
+  "arvore_1": {
+   "nome": "Árvore 1",
+   "fonte": "quaternius",
+   "arquivo": "cenario/arvore_1.glb",
+   "altura": 3.5,
+   "onde": "fundo"
+  },
+  "arvore_2": {
+   "nome": "Árvore 2",
+   "fonte": "quaternius",
+   "arquivo": "cenario/arvore_2.glb",
+   "altura": 3.5,
+   "onde": "fundo"
+  },
+  "arvore_3": {
+   "nome": "Árvore 3",
+   "fonte": "quaternius",
+   "arquivo": "cenario/arvore_3.glb",
+   "altura": 3.5,
+   "onde": "fundo"
+  },
+  "arvore_4": {
+   "nome": "Árvore 4",
+   "fonte": "quaternius",
+   "arquivo": "cenario/arvore_4.glb",
+   "altura": 3.5,
+   "onde": "fundo"
+  },
+  "cogumelo_gigante": {
+   "nome": "Cogumelo gigante",
+   "fonte": "quaternius",
+   "arquivo": "itens/cogumelo.glb",
+   "altura": 3.0,
+   "onde": "fundo"
+  },
+  "pilar": {
+   "nome": "Pilar (KayKit)",
+   "fonte": "kaykit",
+   "arquivo": "cenario/kaykit_pillar_1x1x4.gltf",
+   "altura": 4.0,
+   "onde": "fundo"
+  },
+  "estrutura": {
+   "nome": "Estrutura (KayKit)",
+   "fonte": "kaykit",
+   "arquivo": "cenario/kaykit_arch_green.gltf",
+   "altura": 3.0,
+   "onde": "fundo"
+  }
+ }
+}

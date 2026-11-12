@@ -1,0 +1,2122 @@
+{
+ "versao": 1,
+ "fontes": {
+  "kenney": {
+   "nome": "Kenney (kenney.nl)",
+   "autor": "Kenney Vleugels",
+   "licenca": "CC0 1.0",
+   "url": "https://kenney.nl/assets"
+  },
+  "oga": {
+   "nome": "OpenGameArt.org (artistas CC0)",
+   "autor": "vários artistas",
+   "licenca": "CC0 1.0",
+   "url": "https://opengameart.org"
+  }
+ },
+ "personagens": {
+  "alien_verde": {
+   "nome": "Alien verde",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/alien_verde_stand.png"
+    ],
+    "anda": [
+     "herois/alien_verde_walk1.png",
+     "herois/alien_verde_walk2.png"
+    ],
+    "pulo": [
+     "herois/alien_verde_jump.png"
+    ],
+    "morto": [
+     "herois/alien_verde_hit.png"
+    ],
+    "abaixa": [
+     "herois/alien_verde_duck.png"
+    ]
+   }
+  },
+  "alien_rosa": {
+   "nome": "Alien rosa",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/alien_rosa_stand.png"
+    ],
+    "anda": [
+     "herois/alien_rosa_walk1.png",
+     "herois/alien_rosa_walk2.png"
+    ],
+    "pulo": [
+     "herois/alien_rosa_jump.png"
+    ],
+    "morto": [
+     "herois/alien_rosa_hit.png"
+    ],
+    "abaixa": [
+     "herois/alien_rosa_duck.png"
+    ]
+   }
+  },
+  "alien_azul": {
+   "nome": "Alien azul",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/alien_azul_stand.png"
+    ],
+    "anda": [
+     "herois/alien_azul_walk1.png",
+     "herois/alien_azul_walk2.png"
+    ],
+    "pulo": [
+     "herois/alien_azul_jump.png"
+    ],
+    "morto": [
+     "herois/alien_azul_hit.png"
+    ],
+    "abaixa": [
+     "herois/alien_azul_duck.png"
+    ]
+   }
+  },
+  "alien_amarelo": {
+   "nome": "Alien amarelo",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/alien_amarelo_stand.png"
+    ],
+    "anda": [
+     "herois/alien_amarelo_walk1.png",
+     "herois/alien_amarelo_walk2.png"
+    ],
+    "pulo": [
+     "herois/alien_amarelo_jump.png"
+    ],
+    "morto": [
+     "herois/alien_amarelo_hit.png"
+    ],
+    "abaixa": [
+     "herois/alien_amarelo_duck.png"
+    ]
+   }
+  },
+  "alien_bege": {
+   "nome": "Alien bege",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/alien_bege_stand.png"
+    ],
+    "anda": [
+     "herois/alien_bege_walk1.png",
+     "herois/alien_bege_walk2.png"
+    ],
+    "pulo": [
+     "herois/alien_bege_jump.png"
+    ],
+    "morto": [
+     "herois/alien_bege_hit.png"
+    ],
+    "abaixa": [
+     "herois/alien_bege_duck.png"
+    ]
+   }
+  },
+  "aventureiro": {
+   "nome": "Aventureiro",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/aventureiro_idle.png"
+    ],
+    "anda": [
+     "herois/aventureiro_walk1.png",
+     "herois/aventureiro_walk2.png"
+    ],
+    "pulo": [
+     "herois/aventureiro_jump.png"
+    ],
+    "queda": [
+     "herois/aventureiro_fall.png"
+    ],
+    "morto": [
+     "herois/aventureiro_hurt.png"
+    ],
+    "vitoria": [
+     "herois/aventureiro_cheer1.png",
+     "herois/aventureiro_cheer2.png"
+    ]
+   }
+  },
+  "aventureira": {
+   "nome": "Aventureira",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/aventureira_idle.png"
+    ],
+    "anda": [
+     "herois/aventureira_walk1.png",
+     "herois/aventureira_walk2.png"
+    ],
+    "pulo": [
+     "herois/aventureira_jump.png"
+    ],
+    "queda": [
+     "herois/aventureira_fall.png"
+    ],
+    "morto": [
+     "herois/aventureira_hurt.png"
+    ],
+    "vitoria": [
+     "herois/aventureira_cheer1.png",
+     "herois/aventureira_cheer2.png"
+    ]
+   }
+  },
+  "jogador": {
+   "nome": "Jogador",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/jogador_idle.png"
+    ],
+    "anda": [
+     "herois/jogador_walk1.png",
+     "herois/jogador_walk2.png"
+    ],
+    "pulo": [
+     "herois/jogador_jump.png"
+    ],
+    "queda": [
+     "herois/jogador_fall.png"
+    ],
+    "morto": [
+     "herois/jogador_hurt.png"
+    ],
+    "vitoria": [
+     "herois/jogador_cheer1.png",
+     "herois/jogador_cheer2.png"
+    ]
+   }
+  },
+  "soldado": {
+   "nome": "Soldado",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/soldado_idle.png"
+    ],
+    "anda": [
+     "herois/soldado_walk1.png",
+     "herois/soldado_walk2.png"
+    ],
+    "pulo": [
+     "herois/soldado_jump.png"
+    ],
+    "queda": [
+     "herois/soldado_fall.png"
+    ],
+    "morto": [
+     "herois/soldado_hurt.png"
+    ],
+    "vitoria": [
+     "herois/soldado_cheer1.png",
+     "herois/soldado_cheer2.png"
+    ]
+   }
+  },
+  "zumbi": {
+   "nome": "Zumbi",
+   "papel": "heroi",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "herois/zumbi_idle.png"
+    ],
+    "anda": [
+     "herois/zumbi_walk1.png",
+     "herois/zumbi_walk2.png"
+    ],
+    "pulo": [
+     "herois/zumbi_jump.png"
+    ],
+    "queda": [
+     "herois/zumbi_fall.png"
+    ],
+    "morto": [
+     "herois/zumbi_hurt.png"
+    ],
+    "vitoria": [
+     "herois/zumbi_cheer1.png",
+     "herois/zumbi_cheer2.png"
+    ]
+   }
+  },
+  "lesma": {
+   "nome": "Lesma (com casco)",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/lesma.png"
+    ],
+    "anda": [
+     "inimigos/lesma.png",
+     "inimigos/lesma_anda.png"
+    ],
+    "casco": [
+     "inimigos/lesma_casco.png"
+    ]
+   }
+  },
+  "sapo": {
+   "nome": "Sapo",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/sapo.png"
+    ],
+    "anda": [
+     "inimigos/sapo.png",
+     "inimigos/sapo_anda.png"
+    ],
+    "morto": [
+     "inimigos/sapo_morto.png"
+    ]
+   }
+  },
+  "gosma_verde": {
+   "nome": "Gosma verde",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/gosma_verde.png"
+    ],
+    "anda": [
+     "inimigos/gosma_verde.png",
+     "inimigos/gosma_verde_anda.png"
+    ],
+    "morto": [
+     "inimigos/gosma_verde_morto.png"
+    ]
+   }
+  },
+  "gosma_azul": {
+   "nome": "Gosma azul",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/gosma_azul.png"
+    ],
+    "anda": [
+     "inimigos/gosma_azul.png",
+     "inimigos/gosma_azul_anda.png"
+    ],
+    "morto": [
+     "inimigos/gosma_azul_morto.png"
+    ]
+   }
+  },
+  "gosma_roxa": {
+   "nome": "Gosma roxa",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/gosma_roxa.png"
+    ],
+    "anda": [
+     "inimigos/gosma_roxa.png",
+     "inimigos/gosma_roxa_anda.png"
+    ],
+    "morto": [
+     "inimigos/gosma_roxa_morto.png"
+    ]
+   }
+  },
+  "bloco_gosma": {
+   "nome": "Bloco de gosma",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/bloco_gosma.png"
+    ],
+    "anda": [
+     "inimigos/bloco_gosma.png",
+     "inimigos/bloco_gosma_anda.png"
+    ],
+    "morto": [
+     "inimigos/bloco_gosma_morto.png"
+    ]
+   }
+  },
+  "abelha": {
+   "nome": "Abelha",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/abelha.png"
+    ],
+    "anda": [
+     "inimigos/abelha.png",
+     "inimigos/abelha_anda.png"
+    ],
+    "morto": [
+     "inimigos/abelha_morto.png"
+    ]
+   }
+  },
+  "mosca": {
+   "nome": "Mosca",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/mosca.png"
+    ],
+    "anda": [
+     "inimigos/mosca.png",
+     "inimigos/mosca_anda.png"
+    ],
+    "morto": [
+     "inimigos/mosca_morto.png"
+    ]
+   }
+  },
+  "rato": {
+   "nome": "Rato",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/rato.png"
+    ],
+    "anda": [
+     "inimigos/rato.png",
+     "inimigos/rato_anda.png"
+    ],
+    "morto": [
+     "inimigos/rato_morto.png"
+    ]
+   }
+  },
+  "joaninha": {
+   "nome": "Joaninha",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/joaninha.png"
+    ],
+    "anda": [
+     "inimigos/joaninha.png",
+     "inimigos/joaninha_anda.png"
+    ],
+    "voa": [
+     "inimigos/joaninha_voa.png"
+    ]
+   }
+  },
+  "minhoca": {
+   "nome": "Minhoca",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/minhoca.png"
+    ],
+    "anda": [
+     "inimigos/minhoca.png",
+     "inimigos/minhoca_anda.png"
+    ],
+    "morto": [
+     "inimigos/minhoca_morto.png"
+    ]
+   }
+  },
+  "minhoca_rosa": {
+   "nome": "Minhoca rosa",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/minhoca_rosa.png"
+    ],
+    "anda": [
+     "inimigos/minhoca_rosa.png",
+     "inimigos/minhoca_rosa_anda.png"
+    ],
+    "morto": [
+     "inimigos/minhoca_rosa_morto.png"
+    ]
+   }
+  },
+  "peixe": {
+   "nome": "Peixe",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/peixe.png"
+    ],
+    "anda": [
+     "inimigos/peixe.png",
+     "inimigos/peixe_anda.png"
+    ]
+   }
+  },
+  "serra": {
+   "nome": "Serra",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/serra.png"
+    ],
+    "anda": [
+     "inimigos/serra.png",
+     "inimigos/serra_anda.png"
+    ]
+   }
+  },
+  "planta": {
+   "nome": "Planta carnívora",
+   "papel": "inimigo",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "inimigos/planta.png"
+    ],
+    "anda": [
+     "inimigos/planta.png",
+     "inimigos/planta_anda.png"
+    ],
+    "morto": [
+     "inimigos/planta_morto.png"
+    ]
+   }
+  },
+  "besouro_gigante": {
+   "nome": "Besouro gigante (chefe)",
+   "papel": "chefe",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/colorized-boss-sprites",
+   "quadros": {
+    "parado": [
+     "inimigos/besouro_gigante.png"
+    ]
+   }
+  },
+  "homem_arvore": {
+   "nome": "Homem-árvore (chefe)",
+   "papel": "chefe",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/treeman",
+   "quadros": {
+    "parado": [
+     "inimigos/homem_arvore.png"
+    ]
+   }
+  },
+  "moeda_ouro": {
+   "nome": "Moeda de ouro",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/moeda_ouro.png"
+    ]
+   }
+  },
+  "moeda_prata": {
+   "nome": "Moeda de prata",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/moeda_prata.png"
+    ]
+   }
+  },
+  "moeda_bronze": {
+   "nome": "Moeda de bronze",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/moeda_bronze.png"
+    ]
+   }
+  },
+  "gema_azul": {
+   "nome": "Gema azul",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/gema_azul.png"
+    ]
+   }
+  },
+  "gema_verde": {
+   "nome": "Gema verde",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/gema_verde.png"
+    ]
+   }
+  },
+  "gema_vermelha": {
+   "nome": "Gema vermelha",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/gema_vermelha.png"
+    ]
+   }
+  },
+  "gema_amarela": {
+   "nome": "Gema amarela",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/gema_amarela.png"
+    ]
+   }
+  },
+  "chave": {
+   "nome": "Chave",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/chave.png"
+    ]
+   }
+  },
+  "estrela": {
+   "nome": "Estrela",
+   "papel": "poder",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/estrela.png"
+    ]
+   }
+  },
+  "cogumelo": {
+   "nome": "Cogumelo",
+   "papel": "poder",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/cogumelo.png"
+    ]
+   }
+  },
+  "cogumelo_marrom": {
+   "nome": "Cogumelo marrom",
+   "papel": "poder",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/cogumelo_marrom.png"
+    ]
+   }
+  },
+  "coracao": {
+   "nome": "Coração",
+   "papel": "poder",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/coracao.png"
+    ]
+   }
+  },
+  "bandeira_verde": {
+   "nome": "Bandeira verde",
+   "papel": "fim",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/bandeira_verde1.png",
+     "itens/bandeira_verde2.png"
+    ]
+   }
+  },
+  "bandeira_vermelha": {
+   "nome": "Bandeira vermelha",
+   "papel": "fim",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/bandeira_vermelha1.png",
+     "itens/bandeira_vermelha2.png"
+    ]
+   }
+  },
+  "bandeira_azul": {
+   "nome": "Bandeira azul",
+   "papel": "fim",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/bandeira_azul1.png",
+     "itens/bandeira_azul2.png"
+    ]
+   }
+  },
+  "bandeira_amarela": {
+   "nome": "Bandeira amarela",
+   "papel": "fim",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/bandeira_amarela1.png",
+     "itens/bandeira_amarela2.png"
+    ]
+   }
+  },
+  "mola": {
+   "nome": "Mola",
+   "papel": "item",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "itens/mola.png"
+    ]
+   }
+  },
+  "plataforma_madeira": {
+   "nome": "Plataforma de madeira",
+   "papel": "plataforma",
+   "fonte": "kenney",
+   "quadros": {
+    "parado": [
+     "blocos/plataforma_madeira.png"
+    ]
+   }
+  }
+ },
+ "blocos": {
+  "grama": {
+   "nome": "Grama",
+   "fonte": "kenney",
+   "topo": "blocos/grama_topo.png",
+   "meio": "blocos/grama_meio.png",
+   "esq": "blocos/grama_esq.png",
+   "dir": "blocos/grama_dir.png",
+   "sozinho": "blocos/grama_sozinho.png",
+   "meio_bloco": "blocos/grama_meio_fino.png"
+  },
+  "terra": {
+   "nome": "Terra",
+   "fonte": "kenney",
+   "topo": "blocos/terra_topo.png",
+   "meio": "blocos/terra_meio.png",
+   "esq": "blocos/terra_esq.png",
+   "dir": "blocos/terra_dir.png",
+   "sozinho": "blocos/terra_sozinho.png",
+   "meio_bloco": "blocos/terra_meio_fino.png"
+  },
+  "pedra": {
+   "nome": "Pedra",
+   "fonte": "kenney",
+   "topo": "blocos/pedra_topo.png",
+   "meio": "blocos/pedra_meio.png",
+   "esq": "blocos/pedra_esq.png",
+   "dir": "blocos/pedra_dir.png",
+   "sozinho": "blocos/pedra_sozinho.png",
+   "meio_bloco": "blocos/pedra_meio_fino.png"
+  },
+  "areia": {
+   "nome": "Areia",
+   "fonte": "kenney",
+   "topo": "blocos/areia_topo.png",
+   "meio": "blocos/areia_meio.png",
+   "esq": "blocos/areia_esq.png",
+   "dir": "blocos/areia_dir.png",
+   "sozinho": "blocos/areia_sozinho.png",
+   "meio_bloco": "blocos/areia_meio_fino.png"
+  },
+  "neve": {
+   "nome": "Neve",
+   "fonte": "kenney",
+   "topo": "blocos/neve_topo.png",
+   "meio": "blocos/neve_meio.png",
+   "esq": "blocos/neve_esq.png",
+   "dir": "blocos/neve_dir.png",
+   "sozinho": "blocos/neve_sozinho.png",
+   "meio_bloco": "blocos/neve_meio_fino.png"
+  },
+  "planeta": {
+   "nome": "Planeta",
+   "fonte": "kenney",
+   "topo": "blocos/planeta_topo.png",
+   "meio": "blocos/planeta_meio.png",
+   "esq": "blocos/planeta_esq.png",
+   "dir": "blocos/planeta_dir.png",
+   "sozinho": "blocos/planeta_sozinho.png",
+   "meio_bloco": "blocos/planeta_meio_fino.png"
+  },
+  "tijolo": {
+   "nome": "Tijolo",
+   "fonte": "kenney",
+   "sozinho": "blocos/tijolo.png"
+  },
+  "tijolo_cinza": {
+   "nome": "Tijolo cinza",
+   "fonte": "kenney",
+   "sozinho": "blocos/tijolo_cinza.png"
+  },
+  "caixote": {
+   "nome": "Caixote",
+   "fonte": "kenney",
+   "sozinho": "blocos/caixote.png"
+  },
+  "caixa_surpresa": {
+   "nome": "Caixa surpresa",
+   "fonte": "kenney",
+   "sozinho": "blocos/caixa_surpresa.png"
+  },
+  "caixa_usada": {
+   "nome": "Caixa usada",
+   "fonte": "kenney",
+   "sozinho": "blocos/caixa_usada.png"
+  },
+  "caixa_moeda": {
+   "nome": "Caixa de moeda",
+   "fonte": "kenney",
+   "sozinho": "blocos/caixa_moeda.png"
+  },
+  "caixa_moeda_usada": {
+   "nome": "Caixa de moeda usada",
+   "fonte": "kenney",
+   "sozinho": "blocos/caixa_moeda_usada.png"
+  },
+  "espinhos": {
+   "nome": "Espinhos",
+   "fonte": "kenney",
+   "sozinho": "blocos/espinhos.png"
+  },
+  "lava": {
+   "nome": "Lava",
+   "fonte": "kenney",
+   "sozinho": "blocos/lava.png",
+   "topo": "blocos/lava_topo.png",
+   "meio": "blocos/lava.png"
+  },
+  "lava_topo": {
+   "nome": "Lava (superfície)",
+   "fonte": "kenney",
+   "sozinho": "blocos/lava_topo.png"
+  },
+  "agua": {
+   "nome": "Água",
+   "fonte": "kenney",
+   "sozinho": "blocos/agua.png",
+   "topo": "blocos/agua_topo.png",
+   "meio": "blocos/agua.png"
+  },
+  "agua_topo": {
+   "nome": "Água (superfície)",
+   "fonte": "kenney",
+   "sozinho": "blocos/agua_topo.png"
+  },
+  "ponte": {
+   "nome": "Ponte",
+   "fonte": "kenney",
+   "sozinho": "blocos/ponte.png"
+  },
+  "escada": {
+   "nome": "Escada",
+   "fonte": "kenney",
+   "sozinho": "blocos/escada.png"
+  },
+  "porta": {
+   "nome": "Porta",
+   "fonte": "kenney",
+   "sozinho": "blocos/porta.png"
+  },
+  "cadeado": {
+   "nome": "Cadeado",
+   "fonte": "kenney",
+   "sozinho": "blocos/cadeado.png"
+  },
+  "arbusto": {
+   "nome": "Arbusto",
+   "fonte": "kenney",
+   "sozinho": "blocos/arbusto.png"
+  },
+  "pedra_solta": {
+   "nome": "Pedra solta",
+   "fonte": "kenney",
+   "sozinho": "blocos/pedra_solta.png"
+  },
+  "cacto": {
+   "nome": "Cacto",
+   "fonte": "kenney",
+   "sozinho": "blocos/cacto.png"
+  },
+  "cerca": {
+   "nome": "Cerca",
+   "fonte": "kenney",
+   "sozinho": "blocos/cerca.png"
+  },
+  "tocha": {
+   "nome": "Tocha",
+   "fonte": "kenney",
+   "sozinho": "blocos/tocha.png"
+  },
+  "placa": {
+   "nome": "Placa",
+   "fonte": "kenney",
+   "sozinho": "blocos/placa.png"
+  },
+  "mato": {
+   "nome": "Mato",
+   "fonte": "kenney",
+   "sozinho": "blocos/mato.png"
+  },
+  "cogumelo_vermelho": {
+   "nome": "Chapéu de cogumelo vermelho",
+   "fonte": "kenney",
+   "topo": "blocos/cogumelo_vermelho_topo.png",
+   "esq": "blocos/cogumelo_vermelho_esq.png",
+   "dir": "blocos/cogumelo_vermelho_dir.png",
+   "sozinho": "blocos/cogumelo_vermelho_topo.png"
+  },
+  "cogumelo_marrom": {
+   "nome": "Chapéu de cogumelo marrom",
+   "fonte": "kenney",
+   "topo": "blocos/cogumelo_marrom_topo.png",
+   "esq": "blocos/cogumelo_marrom_esq.png",
+   "dir": "blocos/cogumelo_marrom_dir.png",
+   "sozinho": "blocos/cogumelo_marrom_topo.png"
+  },
+  "cogumelo_bege": {
+   "nome": "Chapéu de cogumelo bege",
+   "fonte": "kenney",
+   "topo": "blocos/cogumelo_bege_topo.png",
+   "esq": "blocos/cogumelo_bege_esq.png",
+   "dir": "blocos/cogumelo_bege_dir.png",
+   "sozinho": "blocos/cogumelo_bege_topo.png"
+  },
+  "caule": {
+   "nome": "Caule de cogumelo",
+   "fonte": "kenney",
+   "sozinho": "blocos/caule.png",
+   "topo": "blocos/caule_topo.png"
+  }
+ },
+ "fundos": {
+  "campo": {
+   "nome": "Campo ensolarado",
+   "fonte": "kenney",
+   "arquivo": "fundos/campo.png",
+   "repete": true
+  },
+  "campo_azul": {
+   "nome": "Campo azul",
+   "fonte": "kenney",
+   "arquivo": "fundos/campo_azul.png",
+   "repete": true
+  },
+  "cogumelos": {
+   "nome": "Terra dos cogumelos",
+   "fonte": "kenney",
+   "arquivo": "fundos/cogumelos.png",
+   "repete": true
+  },
+  "cogumelos_azul": {
+   "nome": "Cogumelos (azul)",
+   "fonte": "kenney",
+   "arquivo": "fundos/cogumelos_azul.png",
+   "repete": true
+  },
+  "deserto": {
+   "nome": "Deserto",
+   "fonte": "kenney",
+   "arquivo": "fundos/deserto.png",
+   "repete": true
+  },
+  "montes": {
+   "nome": "Montes",
+   "fonte": "kenney",
+   "arquivo": "fundos/montes.png",
+   "repete": true
+  },
+  "castelo": {
+   "nome": "Castelo",
+   "fonte": "kenney",
+   "arquivo": "fundos/castelo.png",
+   "repete": true
+  },
+  "pradaria": {
+   "nome": "Pradaria",
+   "fonte": "kenney",
+   "arquivo": "fundos/pradaria.png",
+   "repete": true
+  },
+  "floresta_cogumelos": {
+   "nome": "Floresta de cogumelos",
+   "fonte": "kenney",
+   "arquivo": "fundos/floresta_cogumelos.png",
+   "repete": true
+  },
+  "floresta": {
+   "nome": "Floresta",
+   "fonte": "kenney",
+   "arquivo": "fundos/floresta.png",
+   "repete": true
+  },
+  "castelos": {
+   "nome": "Castelos",
+   "fonte": "kenney",
+   "arquivo": "fundos/castelos.png",
+   "repete": true
+  },
+  "outono": {
+   "nome": "Outono",
+   "fonte": "kenney",
+   "arquivo": "fundos/outono.png",
+   "repete": true
+  },
+  "dunas": {
+   "nome": "Dunas",
+   "fonte": "kenney",
+   "arquivo": "fundos/dunas.png",
+   "repete": true
+  },
+  "prado_aquarela": {
+   "nome": "Prado em aquarela",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/meadow-background",
+   "arquivo": "fundos/prado_aquarela.jpg",
+   "repete": false
+  },
+  "montanha_gelada": {
+   "nome": "Montanha gelada (pintura)",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/oil-painting-landscapes",
+   "arquivo": "fundos/montanha_gelada.jpg",
+   "repete": false
+  },
+  "torre_mago": {
+   "nome": "Torre do mago (pintura)",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/oil-painting-landscapes",
+   "arquivo": "fundos/torre_mago.jpg",
+   "repete": false
+  },
+  "por_do_sol": {
+   "nome": "Pôr do sol no pântano (pintura)",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/oil-painting-landscapes",
+   "arquivo": "fundos/por_do_sol.jpg",
+   "repete": false
+  },
+  "nuvens_deserto": {
+   "nome": "Nuvens no deserto (pintura)",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/oil-painting-landscapes",
+   "arquivo": "fundos/nuvens_deserto.jpg",
+   "repete": false
+  },
+  "piramide": {
+   "nome": "Pirâmide",
+   "fonte": "oga",
+   "fonte_url": "https://opengameart.org/content/pyramid-background-0",
+   "arquivo": "fundos/piramide.jpg",
+   "repete": false
+  }
+ },
+ "enfeites": {
+  "nuvem1": {
+   "nome": "Nuvem1",
+   "fonte": "kenney",
+   "arquivo": "enfeites/nuvem1.png"
+  },
+  "nuvem2": {
+   "nome": "Nuvem2",
+   "fonte": "kenney",
+   "arquivo": "enfeites/nuvem2.png"
+  },
+  "nuvem3": {
+   "nome": "Nuvem3",
+   "fonte": "kenney",
+   "arquivo": "enfeites/nuvem3.png"
+  },
+  "arvore": {
+   "nome": "Arvore",
+   "fonte": "kenney",
+   "arquivo": "enfeites/arvore.png"
+  },
+  "pinheiro": {
+   "nome": "Pinheiro",
+   "fonte": "kenney",
+   "arquivo": "enfeites/pinheiro.png"
+  },
+  "arvore_alta": {
+   "nome": "Arvore alta",
+   "fonte": "kenney",
+   "arquivo": "enfeites/arvore_alta.png"
+  },
+  "moita": {
+   "nome": "Moita",
+   "fonte": "kenney",
+   "arquivo": "enfeites/moita.png"
+  },
+  "castelinho": {
+   "nome": "Castelinho",
+   "fonte": "kenney",
+   "arquivo": "enfeites/castelinho.png"
+  },
+  "torre": {
+   "nome": "Torre",
+   "fonte": "kenney",
+   "arquivo": "enfeites/torre.png"
+  },
+  "sol": {
+   "nome": "Sol",
+   "fonte": "kenney",
+   "arquivo": "enfeites/sol.png"
+  },
+  "lua": {
+   "nome": "Lua",
+   "fonte": "kenney",
+   "arquivo": "enfeites/lua.png"
+  },
+  "casa": {
+   "nome": "Casa",
+   "fonte": "kenney",
+   "arquivo": "enfeites/casa.png"
+  },
+  "coqueiro": {
+   "nome": "Coqueiro",
+   "fonte": "kenney",
+   "arquivo": "enfeites/coqueiro.png"
+  },
+  "colinas": {
+   "nome": "Colinas",
+   "fonte": "kenney",
+   "arquivo": "enfeites/colinas.png",
+   "camada": true
+  },
+  "montanhas": {
+   "nome": "Montanhas",
+   "fonte": "kenney",
+   "arquivo": "enfeites/montanhas.png",
+   "camada": true
+  },
+  "camada_nuvens": {
+   "nome": "Camada nuvens",
+   "fonte": "kenney",
+   "arquivo": "enfeites/camada_nuvens.png",
+   "camada": true
+  },
+  "camada_nuvens2": {
+   "nome": "Camada nuvens2",
+   "fonte": "kenney",
+   "arquivo": "enfeites/camada_nuvens2.png",
+   "camada": true
+  }
+ },
+ "tamanhos": {
+  "herois/alien_verde_stand.png": [
+   113,
+   156
+  ],
+  "herois/alien_verde_walk1.png": [
+   113,
+   156
+  ],
+  "herois/alien_verde_walk2.png": [
+   113,
+   156
+  ],
+  "herois/alien_verde_jump.png": [
+   113,
+   156
+  ],
+  "herois/alien_verde_hit.png": [
+   113,
+   156
+  ],
+  "herois/alien_verde_duck.png": [
+   113,
+   156
+  ],
+  "herois/alien_rosa_stand.png": [
+   113,
+   156
+  ],
+  "herois/alien_rosa_walk1.png": [
+   113,
+   156
+  ],
+  "herois/alien_rosa_walk2.png": [
+   113,
+   156
+  ],
+  "herois/alien_rosa_jump.png": [
+   113,
+   156
+  ],
+  "herois/alien_rosa_hit.png": [
+   113,
+   156
+  ],
+  "herois/alien_rosa_duck.png": [
+   113,
+   156
+  ],
+  "herois/alien_azul_stand.png": [
+   113,
+   156
+  ],
+  "herois/alien_azul_walk1.png": [
+   113,
+   156
+  ],
+  "herois/alien_azul_walk2.png": [
+   113,
+   156
+  ],
+  "herois/alien_azul_jump.png": [
+   113,
+   156
+  ],
+  "herois/alien_azul_hit.png": [
+   113,
+   156
+  ],
+  "herois/alien_azul_duck.png": [
+   113,
+   156
+  ],
+  "herois/alien_amarelo_stand.png": [
+   113,
+   140
+  ],
+  "herois/alien_amarelo_walk1.png": [
+   113,
+   140
+  ],
+  "herois/alien_amarelo_walk2.png": [
+   113,
+   140
+  ],
+  "herois/alien_amarelo_jump.png": [
+   113,
+   140
+  ],
+  "herois/alien_amarelo_hit.png": [
+   113,
+   140
+  ],
+  "herois/alien_amarelo_duck.png": [
+   113,
+   140
+  ],
+  "herois/alien_bege_stand.png": [
+   113,
+   156
+  ],
+  "herois/alien_bege_walk1.png": [
+   113,
+   156
+  ],
+  "herois/alien_bege_walk2.png": [
+   113,
+   156
+  ],
+  "herois/alien_bege_jump.png": [
+   113,
+   156
+  ],
+  "herois/alien_bege_hit.png": [
+   113,
+   156
+  ],
+  "herois/alien_bege_duck.png": [
+   113,
+   156
+  ],
+  "herois/aventureiro_idle.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_walk1.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_walk2.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_jump.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_fall.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_hurt.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_cheer1.png": [
+   79,
+   98
+  ],
+  "herois/aventureiro_cheer2.png": [
+   79,
+   98
+  ],
+  "herois/aventureira_idle.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_walk1.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_walk2.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_jump.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_fall.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_hurt.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_cheer1.png": [
+   79,
+   93
+  ],
+  "herois/aventureira_cheer2.png": [
+   79,
+   93
+  ],
+  "herois/jogador_idle.png": [
+   79,
+   102
+  ],
+  "herois/jogador_walk1.png": [
+   79,
+   102
+  ],
+  "herois/jogador_walk2.png": [
+   79,
+   102
+  ],
+  "herois/jogador_jump.png": [
+   79,
+   102
+  ],
+  "herois/jogador_fall.png": [
+   79,
+   102
+  ],
+  "herois/jogador_hurt.png": [
+   79,
+   102
+  ],
+  "herois/jogador_cheer1.png": [
+   79,
+   102
+  ],
+  "herois/jogador_cheer2.png": [
+   79,
+   102
+  ],
+  "herois/soldado_idle.png": [
+   79,
+   97
+  ],
+  "herois/soldado_walk1.png": [
+   79,
+   97
+  ],
+  "herois/soldado_walk2.png": [
+   79,
+   97
+  ],
+  "herois/soldado_jump.png": [
+   79,
+   97
+  ],
+  "herois/soldado_fall.png": [
+   79,
+   97
+  ],
+  "herois/soldado_hurt.png": [
+   79,
+   97
+  ],
+  "herois/soldado_cheer1.png": [
+   79,
+   97
+  ],
+  "herois/soldado_cheer2.png": [
+   79,
+   97
+  ],
+  "herois/zumbi_idle.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_walk1.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_walk2.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_jump.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_fall.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_hurt.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_cheer1.png": [
+   79,
+   96
+  ],
+  "herois/zumbi_cheer2.png": [
+   79,
+   96
+  ],
+  "inimigos/lesma.png": [
+   110,
+   72
+  ],
+  "inimigos/lesma_anda.png": [
+   110,
+   72
+  ],
+  "inimigos/lesma_casco.png": [
+   110,
+   72
+  ],
+  "inimigos/sapo.png": [
+   110,
+   97
+  ],
+  "inimigos/sapo_anda.png": [
+   110,
+   97
+  ],
+  "inimigos/sapo_morto.png": [
+   110,
+   97
+  ],
+  "inimigos/gosma_verde.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_verde_anda.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_verde_morto.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_azul.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_azul_anda.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_azul_morto.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_roxa.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_roxa_anda.png": [
+   104,
+   62
+  ],
+  "inimigos/gosma_roxa_morto.png": [
+   104,
+   62
+  ],
+  "inimigos/bloco_gosma.png": [
+   100,
+   92
+  ],
+  "inimigos/bloco_gosma_anda.png": [
+   100,
+   92
+  ],
+  "inimigos/bloco_gosma_morto.png": [
+   100,
+   92
+  ],
+  "inimigos/abelha.png": [
+   112,
+   88
+  ],
+  "inimigos/abelha_anda.png": [
+   112,
+   88
+  ],
+  "inimigos/abelha_morto.png": [
+   112,
+   88
+  ],
+  "inimigos/mosca.png": [
+   118,
+   82
+  ],
+  "inimigos/mosca_anda.png": [
+   118,
+   82
+  ],
+  "inimigos/mosca_morto.png": [
+   118,
+   82
+  ],
+  "inimigos/rato.png": [
+   107,
+   63
+  ],
+  "inimigos/rato_anda.png": [
+   107,
+   63
+  ],
+  "inimigos/rato_morto.png": [
+   107,
+   63
+  ],
+  "inimigos/joaninha.png": [
+   110,
+   76
+  ],
+  "inimigos/joaninha_anda.png": [
+   110,
+   76
+  ],
+  "inimigos/joaninha_voa.png": [
+   110,
+   76
+  ],
+  "inimigos/minhoca.png": [
+   116,
+   42
+  ],
+  "inimigos/minhoca_anda.png": [
+   116,
+   42
+  ],
+  "inimigos/minhoca_morto.png": [
+   116,
+   42
+  ],
+  "inimigos/minhoca_rosa.png": [
+   116,
+   42
+  ],
+  "inimigos/minhoca_rosa_anda.png": [
+   116,
+   42
+  ],
+  "inimigos/minhoca_rosa_morto.png": [
+   116,
+   42
+  ],
+  "inimigos/peixe.png": [
+   82,
+   109
+  ],
+  "inimigos/peixe_anda.png": [
+   82,
+   109
+  ],
+  "inimigos/serra.png": [
+   114,
+   114
+  ],
+  "inimigos/serra_anda.png": [
+   114,
+   114
+  ],
+  "inimigos/planta.png": [
+   92,
+   105
+  ],
+  "inimigos/planta_anda.png": [
+   92,
+   105
+  ],
+  "inimigos/planta_morto.png": [
+   92,
+   105
+  ],
+  "inimigos/besouro_gigante.png": [
+   122,
+   101
+  ],
+  "inimigos/homem_arvore.png": [
+   250,
+   363
+  ],
+  "itens/moeda_ouro.png": [
+   64,
+   64
+  ],
+  "itens/moeda_prata.png": [
+   64,
+   64
+  ],
+  "itens/moeda_bronze.png": [
+   64,
+   64
+  ],
+  "itens/gema_azul.png": [
+   70,
+   48
+  ],
+  "itens/gema_verde.png": [
+   70,
+   48
+  ],
+  "itens/gema_vermelha.png": [
+   70,
+   48
+  ],
+  "itens/gema_amarela.png": [
+   70,
+   48
+  ],
+  "itens/chave.png": [
+   83,
+   52
+  ],
+  "itens/estrela.png": [
+   62,
+   59
+  ],
+  "itens/cogumelo.png": [
+   72,
+   55
+  ],
+  "itens/cogumelo_marrom.png": [
+   72,
+   55
+  ],
+  "itens/coracao.png": [
+   95,
+   83
+  ],
+  "itens/bandeira_verde1.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_verde2.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_vermelha1.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_vermelha2.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_azul1.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_azul2.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_amarela1.png": [
+   119,
+   128
+  ],
+  "itens/bandeira_amarela2.png": [
+   119,
+   128
+  ],
+  "itens/mola.png": [
+   128,
+   66
+  ],
+  "blocos/plataforma_madeira.png": [
+   128,
+   37
+  ],
+  "blocos/grama_topo.png": [
+   128,
+   128
+  ],
+  "blocos/grama_meio.png": [
+   128,
+   128
+  ],
+  "blocos/grama_esq.png": [
+   128,
+   128
+  ],
+  "blocos/grama_dir.png": [
+   128,
+   128
+  ],
+  "blocos/grama_sozinho.png": [
+   128,
+   128
+  ],
+  "blocos/grama_meio_fino.png": [
+   128,
+   128
+  ],
+  "blocos/terra_topo.png": [
+   128,
+   128
+  ],
+  "blocos/terra_meio.png": [
+   128,
+   128
+  ],
+  "blocos/terra_esq.png": [
+   128,
+   128
+  ],
+  "blocos/terra_dir.png": [
+   128,
+   128
+  ],
+  "blocos/terra_sozinho.png": [
+   128,
+   128
+  ],
+  "blocos/terra_meio_fino.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_topo.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_meio.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_esq.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_dir.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_sozinho.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_meio_fino.png": [
+   128,
+   128
+  ],
+  "blocos/areia_topo.png": [
+   128,
+   128
+  ],
+  "blocos/areia_meio.png": [
+   128,
+   128
+  ],
+  "blocos/areia_esq.png": [
+   128,
+   128
+  ],
+  "blocos/areia_dir.png": [
+   128,
+   128
+  ],
+  "blocos/areia_sozinho.png": [
+   128,
+   128
+  ],
+  "blocos/areia_meio_fino.png": [
+   128,
+   128
+  ],
+  "blocos/neve_topo.png": [
+   128,
+   128
+  ],
+  "blocos/neve_meio.png": [
+   128,
+   128
+  ],
+  "blocos/neve_esq.png": [
+   128,
+   128
+  ],
+  "blocos/neve_dir.png": [
+   128,
+   128
+  ],
+  "blocos/neve_sozinho.png": [
+   128,
+   128
+  ],
+  "blocos/neve_meio_fino.png": [
+   128,
+   128
+  ],
+  "blocos/planeta_topo.png": [
+   128,
+   128
+  ],
+  "blocos/planeta_meio.png": [
+   128,
+   128
+  ],
+  "blocos/planeta_esq.png": [
+   128,
+   128
+  ],
+  "blocos/planeta_dir.png": [
+   128,
+   128
+  ],
+  "blocos/planeta_sozinho.png": [
+   128,
+   128
+  ],
+  "blocos/planeta_meio_fino.png": [
+   128,
+   128
+  ],
+  "blocos/tijolo.png": [
+   128,
+   128
+  ],
+  "blocos/tijolo_cinza.png": [
+   128,
+   128
+  ],
+  "blocos/caixote.png": [
+   128,
+   128
+  ],
+  "blocos/caixa_surpresa.png": [
+   128,
+   128
+  ],
+  "blocos/caixa_usada.png": [
+   128,
+   128
+  ],
+  "blocos/caixa_moeda.png": [
+   128,
+   128
+  ],
+  "blocos/caixa_moeda_usada.png": [
+   128,
+   128
+  ],
+  "blocos/espinhos.png": [
+   128,
+   128
+  ],
+  "blocos/lava.png": [
+   128,
+   128
+  ],
+  "blocos/lava_topo.png": [
+   128,
+   128
+  ],
+  "blocos/agua.png": [
+   128,
+   128
+  ],
+  "blocos/agua_topo.png": [
+   128,
+   128
+  ],
+  "blocos/ponte.png": [
+   128,
+   128
+  ],
+  "blocos/escada.png": [
+   128,
+   128
+  ],
+  "blocos/porta.png": [
+   128,
+   128
+  ],
+  "blocos/cadeado.png": [
+   128,
+   128
+  ],
+  "blocos/arbusto.png": [
+   128,
+   128
+  ],
+  "blocos/pedra_solta.png": [
+   128,
+   128
+  ],
+  "blocos/cacto.png": [
+   128,
+   128
+  ],
+  "blocos/cerca.png": [
+   128,
+   128
+  ],
+  "blocos/tocha.png": [
+   128,
+   128
+  ],
+  "blocos/placa.png": [
+   128,
+   128
+  ],
+  "blocos/mato.png": [
+   128,
+   128
+  ],
+  "blocos/cogumelo_vermelho_topo.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_vermelho_esq.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_vermelho_dir.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_marrom_topo.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_marrom_esq.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_marrom_dir.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_bege_topo.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_bege_esq.png": [
+   70,
+   70
+  ],
+  "blocos/cogumelo_bege_dir.png": [
+   70,
+   70
+  ],
+  "blocos/caule.png": [
+   70,
+   70
+  ],
+  "blocos/caule_topo.png": [
+   70,
+   70
+  ],
+  "fundos/campo.png": [
+   1024,
+   1024
+  ],
+  "fundos/campo_azul.png": [
+   1024,
+   1024
+  ],
+  "fundos/cogumelos.png": [
+   1024,
+   1024
+  ],
+  "fundos/cogumelos_azul.png": [
+   1024,
+   1024
+  ],
+  "fundos/deserto.png": [
+   1024,
+   1024
+  ],
+  "fundos/montes.png": [
+   1024,
+   1024
+  ],
+  "fundos/castelo.png": [
+   1024,
+   512
+  ],
+  "fundos/pradaria.png": [
+   1024,
+   512
+  ],
+  "fundos/floresta_cogumelos.png": [
+   1024,
+   512
+  ],
+  "fundos/floresta.png": [
+   1024,
+   1024
+  ],
+  "fundos/castelos.png": [
+   1024,
+   1024
+  ],
+  "fundos/outono.png": [
+   1024,
+   1024
+  ],
+  "fundos/dunas.png": [
+   1024,
+   1024
+  ],
+  "fundos/prado_aquarela.jpg": [
+   1280,
+   860
+  ],
+  "fundos/montanha_gelada.jpg": [
+   1000,
+   700
+  ],
+  "fundos/torre_mago.jpg": [
+   1000,
+   700
+  ],
+  "fundos/por_do_sol.jpg": [
+   1000,
+   700
+  ],
+  "fundos/nuvens_deserto.jpg": [
+   1000,
+   700
+  ],
+  "fundos/piramide.jpg": [
+   1024,
+   768
+  ],
+  "enfeites/nuvem1.png": [
+   203,
+   121
+  ],
+  "enfeites/nuvem2.png": [
+   196,
+   156
+  ],
+  "enfeites/nuvem3.png": [
+   216,
+   139
+  ],
+  "enfeites/arvore.png": [
+   94,
+   204
+  ],
+  "enfeites/pinheiro.png": [
+   106,
+   254
+  ],
+  "enfeites/arvore_alta.png": [
+   82,
+   249
+  ],
+  "enfeites/moita.png": [
+   120,
+   60
+  ],
+  "enfeites/castelinho.png": [
+   108,
+   85
+  ],
+  "enfeites/torre.png": [
+   73,
+   245
+  ],
+  "enfeites/sol.png": [
+   84,
+   84
+  ],
+  "enfeites/lua.png": [
+   78,
+   80
+  ],
+  "enfeites/casa.png": [
+   208,
+   224
+  ],
+  "enfeites/coqueiro.png": [
+   200,
+   238
+  ],
+  "enfeites/colinas.png": [
+   1024,
+   400
+  ],
+  "enfeites/montanhas.png": [
+   1024,
+   400
+  ],
+  "enfeites/camada_nuvens.png": [
+   1024,
+   400
+  ],
+  "enfeites/camada_nuvens2.png": [
+   1024,
+   400
+  ]
+ }
+}

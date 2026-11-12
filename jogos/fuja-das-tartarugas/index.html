@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fuja das tartarugas · Meu Fliperama</title>
+<script src="/estudio/fliperama/motor.js?v=0.9.9"></script>
+<style>
+  html, body { background: #000; margin: 0; height: 100%; }
+  #jogo { width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  #aviso { color: #FCFCFC; font: 14px system-ui, sans-serif; padding: 24px; text-align: center; }
+  #voltar { position: fixed; top: 10px; left: 10px; z-index: 9; color: #fff; background: rgba(0,0,0,.55);
+            font: 600 14px system-ui, sans-serif; padding: 6px 12px; border-radius: 8px; text-decoration: none; }
+</style>
+</head>
+<body>
+<a id="voltar" href="/jogos/">← Jogos</a>
+<div id="jogo"><div id="aviso">carregando o jogo…</div></div>
+<script>
+(async function () {
+  var raiz = document.getElementById('jogo');
+  var spec = {"hd": {"heroi": "soldado"}, "sons": {"musicas": {"tema": {"bpm": 110, "canais": ["A4 - C5 - E5 - D5 - C5 - B4 - A4 - - -"]}}}, "cores": {"fundo": "#000000", "texto": "#FFFFFF", "apagado": "#6C6C6C", "destaque": "#C89C3C"}, "fases": [{"ceu": "#000000", "mapa": ["###################", "#ECo........o.#.CV#", "###.#.#.#o###.###.#", "#.....#...#.#...#.#", "#o#.#.#####.###.#.#", "#.......o..o#...#o#", "#.#.#.#.##o##.###.#", "#.o.#.#...o.o.....#", "#.###############.#", "#...#...o.......#.#", "###.#o#####.###.#.#", "#...#.#...#.o.#...#", "#.#.#.#.#.###.#####", "#o#.#.#.#...#.....#", "#.###o#.###.#####.#", "#.#...#..o#.#o....#", "#.#.###.#o#..o###.#", "#.....#..o#.#...#.#", "#.###o#.#.###.#o#.#", "#....o..#.........#", "#.#.#####.#.#.#o###", "#C#......@#.#....C#", "###################"], "nome": "Espaço", "estilo": "hd", "musica": "tema"}], "heroi": {"vidas": 3, "sprite": "heroi", "velocidade": 1}, "tiles": {"#": {"cor": "#2C2C9C", "borda": "#B0B0B0", "solido": true}}, "perfil": "2600", "textos": {"ideia": "uma pessoa com chapeu vermelho e bigode fugindo de 5 cascos de tartaruga verdes ", "vitoria": "VOCE CONSEGUIU!", "subtitulo": "PEGUE TUDO E FUJA"}, "titulo": "fuja das tartarugas", "sprites": {"alien": {"h": 8, "w": 6, "cores": ["#9C3C9C"], "quadros": [["111111", "1....1", ".1111.", ".1..1.", "..11..", "111111", "111111", ".1..1."], ["111111", "1....1", ".1111.", ".1..1.", ".1111.", "111111", "111111", "..1..1"], ["111111", "1....1", ".1111.", ".1..1.", ".1111.", "111111", "111111", "1..1.."]]}, "heroi": {"h": 8, "w": 5, "cores": ["#5CA040"], "quadros": [["11111", "1.1.1", "11.11", "1...1", "11111", "11111", "1..1.", "11.11"], ["11111", "1.1.1", "11.11", "1...1", "11111", "11111", ".1.11", ".11.."], ["11111", "1.1.1", "11.11", "1...1", "11111", "11111", "111..", "..11."]]}, "poder": {"h": 6, "w": 8, "cores": ["#FFFFFF"], "quadros": [["..111..1", ".11111.1", "11111111", "11111111", ".1111..1", "..111..."], ["..111..1", ".11111.1", "11111111", "11111111", ".1111..1", "..111..."]]}, "ponto": {"h": 8, "w": 8, "cores": ["#B0B0B0"], "quadros": [["........", "........", "........", "...11...", "...11...", "........", "........", "........"], ["........", "........", "........", "...11...", "...11...", "........", "........", "........"]]}, "morcego": {"h": 8, "w": 8, "cores": ["#B83C3C"], "quadros": [["..1111..", "...11...", "1......1", "11....11", "111..111", "11.11.11", "1..11..1", "11111111"], ["..1111..", "..1111..", "...11...", "1......1", "11....11", "11.11.11", "11.11.11", "1..11..1"]]}}, "vitoria": {"tipo": "terminar_fases"}, "montagem": {"por": "regras", "tom": "misterioso", "heroi": "gato", "cenario": "espaco", "objetivo": "fim", "dificuldade": "facil"}, "arquetipo": "labirinto", "entidades": {"C": {"da": "escudo", "tipo": "poder", "sprite": "poder"}, "E": {"tipo": "inimigo", "pontos": 200, "sprite": "alien", "velocidade": 0.4, "comportamento": "persegue"}, "V": {"tipo": "inimigo", "pontos": 300, "sprite": "morcego", "velocidade": 0.5, "comportamento": "patrulha"}, "o": {"tipo": "coletavel", "pontos": 10, "sprite": "ponto"}}, "versao_esquema": 1};
+  try {
+    var perfis = await fetch('/estudio/fliperama/perfis.json?v=0.9.9').then(function (x) { return x.json(); });
+    window.__fliperama = Fliperama.iniciar(raiz, spec, { perfis: perfis, slug: "fuja-das-tartarugas", placar: false });
+  } catch (e) {
+    raiz.innerHTML = '<div id="aviso">O jogo não abriu: ' + String(e && e.message || e).replace(/[<>&]/g, '') + '</div>';
+  }
+})();
+</script>
+</body>
+</html>

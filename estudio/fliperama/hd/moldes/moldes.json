@@ -1,0 +1,367 @@
+{
+ "versao": 1,
+ "origem": "Kenney Pixel Shmup (CC0) — aviões vistos de cima, nariz para cima",
+ "vista": "cima",
+ "moldes": [
+  {
+   "id": "aviao_00",
+   "tipo": "aviao",
+   "rotulo": "Bombardeiro a jato (4 motores)",
+   "palavras": [
+    "jato",
+    "bombardeiro",
+    "quadrimotor",
+    "grande"
+   ],
+   "arquivo": "aviao_00.png",
+   "w": 32,
+   "h": 24,
+   "colorido": true
+  },
+  {
+   "id": "aviao_01",
+   "tipo": "aviao",
+   "rotulo": "Bimotor a hélice grande",
+   "palavras": [
+    "helice",
+    "bimotor",
+    "grande"
+   ],
+   "arquivo": "aviao_01.png",
+   "w": 30,
+   "h": 24,
+   "colorido": true
+  },
+  {
+   "id": "aviao_02",
+   "tipo": "aviao",
+   "rotulo": "Turbo-hélice de carga (4 motores)",
+   "palavras": [
+    "turbo",
+    "helice",
+    "turboelice",
+    "cargueiro",
+    "carga",
+    "quadrimotor",
+    "grande"
+   ],
+   "arquivo": "aviao_02.png",
+   "w": 32,
+   "h": 24,
+   "colorido": true
+  },
+  {
+   "id": "aviao_03",
+   "tipo": "aviao",
+   "rotulo": "Cargueiro de 4 motores",
+   "palavras": [
+    "cargueiro",
+    "carga",
+    "quadrimotor",
+    "turbo",
+    "helice",
+    "grande"
+   ],
+   "arquivo": "aviao_03.png",
+   "w": 32,
+   "h": 23,
+   "colorido": true
+  },
+  {
+   "id": "aviao_04",
+   "tipo": "aviao",
+   "rotulo": "Monomotor a hélice",
+   "palavras": [
+    "helice",
+    "monomotor",
+    "pequeno",
+    "teco",
+    "teco"
+   ],
+   "arquivo": "aviao_04.png",
+   "w": 24,
+   "h": 19,
+   "colorido": true
+  },
+  {
+   "id": "aviao_05",
+   "tipo": "aviao",
+   "rotulo": "Avião de asa larga (hélice)",
+   "palavras": [
+    "helice",
+    "asa",
+    "larga",
+    "acrobacia",
+    "monomotor"
+   ],
+   "arquivo": "aviao_05.png",
+   "w": 30,
+   "h": 19,
+   "colorido": true
+  },
+  {
+   "id": "aviao_06",
+   "tipo": "aviao",
+   "rotulo": "Caça pequeno",
+   "palavras": [
+    "caca",
+    "pequeno",
+    "jato"
+   ],
+   "arquivo": "aviao_06.png",
+   "w": 22,
+   "h": 18,
+   "colorido": true
+  },
+  {
+   "id": "aviao_07",
+   "tipo": "aviao",
+   "rotulo": "Caça a hélice",
+   "palavras": [
+    "caca",
+    "helice",
+    "guerra"
+   ],
+   "arquivo": "aviao_07.png",
+   "w": 28,
+   "h": 23,
+   "colorido": true
+  },
+  {
+   "id": "aviao_08",
+   "tipo": "aviao",
+   "rotulo": "Bimotor turbo-hélice",
+   "palavras": [
+    "bimotor",
+    "turbo",
+    "helice",
+    "turboelice",
+    "helice"
+   ],
+   "arquivo": "aviao_08.png",
+   "w": 26,
+   "h": 16,
+   "colorido": true
+  },
+  {
+   "id": "aviao_09",
+   "tipo": "aviao",
+   "rotulo": "Caça de asa dupla",
+   "palavras": [
+    "caca",
+    "biplano",
+    "asa",
+    "dupla",
+    "helice"
+   ],
+   "arquivo": "aviao_09.png",
+   "w": 24,
+   "h": 17,
+   "colorido": true
+  },
+  {
+   "id": "aviao_10",
+   "tipo": "aviao",
+   "rotulo": "Caça ligeiro",
+   "palavras": [
+    "caca",
+    "ligeiro",
+    "pequeno"
+   ],
+   "arquivo": "aviao_10.png",
+   "w": 20,
+   "h": 17,
+   "colorido": true
+  },
+  {
+   "id": "aviao_11",
+   "tipo": "aviao",
+   "rotulo": "Caça a hélice ligeiro",
+   "palavras": [
+    "caca",
+    "helice",
+    "ligeiro",
+    "pequeno"
+   ],
+   "arquivo": "aviao_11.png",
+   "w": 24,
+   "h": 17,
+   "colorido": true
+  },
+  {
+   "id": "aviao_12",
+   "tipo": "aviao",
+   "rotulo": "Bombardeiro pesado",
+   "palavras": [
+    "bombardeiro",
+    "pesado",
+    "grande",
+    "jato"
+   ],
+   "arquivo": "aviao_12.png",
+   "w": 32,
+   "h": 24,
+   "colorido": false
+  },
+  {
+   "id": "aviao_13",
+   "tipo": "aviao",
+   "rotulo": "Cargueiro pesado",
+   "palavras": [
+    "cargueiro",
+    "pesado",
+    "carga",
+    "grande"
+   ],
+   "arquivo": "aviao_13.png",
+   "w": 30,
+   "h": 24,
+   "colorido": false
+  },
+  {
+   "id": "aviao_14",
+   "tipo": "aviao",
+   "rotulo": "Fortaleza voadora",
+   "palavras": [
+    "fortaleza",
+    "voadora",
+    "bombardeiro",
+    "quadrimotor",
+    "helice",
+    "grande"
+   ],
+   "arquivo": "aviao_14.png",
+   "w": 32,
+   "h": 24,
+   "colorido": false
+  },
+  {
+   "id": "aviao_15",
+   "tipo": "aviao",
+   "rotulo": "Cargueiro de 4 motores (cinza)",
+   "palavras": [
+    "cargueiro",
+    "quadrimotor",
+    "turbo",
+    "helice",
+    "turboelice",
+    "grande"
+   ],
+   "arquivo": "aviao_15.png",
+   "w": 32,
+   "h": 23,
+   "colorido": false
+  },
+  {
+   "id": "aviao_16",
+   "tipo": "aviao",
+   "rotulo": "Monomotor a hélice (cinza)",
+   "palavras": [
+    "helice",
+    "monomotor"
+   ],
+   "arquivo": "aviao_16.png",
+   "w": 24,
+   "h": 19,
+   "colorido": false
+  },
+  {
+   "id": "aviao_17",
+   "tipo": "aviao",
+   "rotulo": "Avião de asa reta",
+   "palavras": [
+    "asa",
+    "reta",
+    "helice",
+    "planador"
+   ],
+   "arquivo": "aviao_17.png",
+   "w": 30,
+   "h": 19,
+   "colorido": false
+  },
+  {
+   "id": "aviao_18",
+   "tipo": "aviao",
+   "rotulo": "Caça pesado",
+   "palavras": [
+    "caca",
+    "pesado"
+   ],
+   "arquivo": "aviao_18.png",
+   "w": 22,
+   "h": 18,
+   "colorido": false
+  },
+  {
+   "id": "aviao_19",
+   "tipo": "aviao",
+   "rotulo": "Caça a jato",
+   "palavras": [
+    "caca",
+    "jato"
+   ],
+   "arquivo": "aviao_19.png",
+   "w": 28,
+   "h": 23,
+   "colorido": false
+  },
+  {
+   "id": "aviao_20",
+   "tipo": "aviao",
+   "rotulo": "Bimotor (cinza)",
+   "palavras": [
+    "bimotor",
+    "helice",
+    "turbo",
+    "helice"
+   ],
+   "arquivo": "aviao_20.png",
+   "w": 26,
+   "h": 16,
+   "colorido": false
+  },
+  {
+   "id": "aviao_21",
+   "tipo": "aviao",
+   "rotulo": "Caça de asa larga",
+   "palavras": [
+    "caca",
+    "asa",
+    "larga"
+   ],
+   "arquivo": "aviao_21.png",
+   "w": 24,
+   "h": 17,
+   "colorido": false
+  },
+  {
+   "id": "aviao_22",
+   "tipo": "aviao",
+   "rotulo": "Interceptador",
+   "palavras": [
+    "interceptador",
+    "caca",
+    "jato"
+   ],
+   "arquivo": "aviao_22.png",
+   "w": 20,
+   "h": 17,
+   "colorido": false
+  },
+  {
+   "id": "aviao_23",
+   "tipo": "aviao",
+   "rotulo": "Bimotor ligeiro",
+   "palavras": [
+    "bimotor",
+    "ligeiro",
+    "helice"
+   ],
+   "arquivo": "aviao_23.png",
+   "w": 24,
+   "h": 17,
+   "colorido": false
+  }
+ ]
+}

@@ -1,0 +1,834 @@
+{
+ "versao": 3,
+ "w": 256,
+ "h": 512,
+ "origem": "Kenney (CC0): Roguelike pack, RPG Urban pack, Space Shooter Redux — composto pela casa (scripts/fliperama_cenarios.py) · Pixel Shmup, Tower Defense top-down (Kenney, CC0) e planetas do OpenGameArt (CC0: 4 large planets, colorful planets) — composto pela casa (scripts/fliperama_cenarios_hd.py) · Pirate Pack, Medieval RTS e Racing Pack (Kenney, CC0) — scripts/fliperama_cenarios_hd2.py",
+ "cenarios": [
+  {
+   "id": "floresta_1",
+   "tema": "floresta",
+   "rotulo": "Floresta com lago",
+   "palavras": [
+    "floresta",
+    "mata",
+    "arvore",
+    "bosque",
+    "selva",
+    "lago",
+    "trilha",
+    "natureza",
+    "verde"
+   ],
+   "arquivo": "floresta_1.png"
+  },
+  {
+   "id": "floresta_2",
+   "tema": "floresta",
+   "rotulo": "Floresta com lago 2",
+   "palavras": [
+    "floresta",
+    "mata",
+    "arvore",
+    "bosque",
+    "selva",
+    "lago",
+    "trilha",
+    "natureza",
+    "verde"
+   ],
+   "arquivo": "floresta_2.png"
+  },
+  {
+   "id": "floresta_3",
+   "tema": "floresta",
+   "rotulo": "Floresta com lago 3",
+   "palavras": [
+    "floresta",
+    "mata",
+    "arvore",
+    "bosque",
+    "selva",
+    "lago",
+    "trilha",
+    "natureza",
+    "verde"
+   ],
+   "arquivo": "floresta_3.png"
+  },
+  {
+   "id": "outono_1",
+   "tema": "outono",
+   "rotulo": "Floresta de outono",
+   "palavras": [
+    "outono",
+    "laranja",
+    "folhas",
+    "marrom",
+    "arvore",
+    "floresta",
+    "tarde"
+   ],
+   "arquivo": "outono_1.png"
+  },
+  {
+   "id": "outono_2",
+   "tema": "outono",
+   "rotulo": "Floresta de outono 2",
+   "palavras": [
+    "outono",
+    "laranja",
+    "folhas",
+    "marrom",
+    "arvore",
+    "floresta",
+    "tarde"
+   ],
+   "arquivo": "outono_2.png"
+  },
+  {
+   "id": "outono_3",
+   "tema": "outono",
+   "rotulo": "Floresta de outono 3",
+   "palavras": [
+    "outono",
+    "laranja",
+    "folhas",
+    "marrom",
+    "arvore",
+    "floresta",
+    "tarde"
+   ],
+   "arquivo": "outono_3.png"
+  },
+  {
+   "id": "campo_1",
+   "tema": "campo",
+   "rotulo": "Campo florido",
+   "palavras": [
+    "campo",
+    "flor",
+    "flores",
+    "fazenda",
+    "grama",
+    "pasto",
+    "jardim",
+    "prado",
+    "primavera"
+   ],
+   "arquivo": "campo_1.png"
+  },
+  {
+   "id": "campo_2",
+   "tema": "campo",
+   "rotulo": "Campo florido 2",
+   "palavras": [
+    "campo",
+    "flor",
+    "flores",
+    "fazenda",
+    "grama",
+    "pasto",
+    "jardim",
+    "prado",
+    "primavera"
+   ],
+   "arquivo": "campo_2.png"
+  },
+  {
+   "id": "campo_3",
+   "tema": "campo",
+   "rotulo": "Campo florido 3",
+   "palavras": [
+    "campo",
+    "flor",
+    "flores",
+    "fazenda",
+    "grama",
+    "pasto",
+    "jardim",
+    "prado",
+    "primavera"
+   ],
+   "arquivo": "campo_3.png"
+  },
+  {
+   "id": "mar_1",
+   "tema": "mar",
+   "rotulo": "Mar com ilhas",
+   "palavras": [
+    "mar",
+    "oceano",
+    "ilha",
+    "praia",
+    "agua",
+    "litoral",
+    "rio",
+    "lago",
+    "azul",
+    "pirata"
+   ],
+   "arquivo": "mar_1.png"
+  },
+  {
+   "id": "mar_2",
+   "tema": "mar",
+   "rotulo": "Mar com ilhas 2",
+   "palavras": [
+    "mar",
+    "oceano",
+    "ilha",
+    "praia",
+    "agua",
+    "litoral",
+    "rio",
+    "lago",
+    "azul",
+    "pirata"
+   ],
+   "arquivo": "mar_2.png"
+  },
+  {
+   "id": "mar_3",
+   "tema": "mar",
+   "rotulo": "Mar com ilhas 3",
+   "palavras": [
+    "mar",
+    "oceano",
+    "ilha",
+    "praia",
+    "agua",
+    "litoral",
+    "rio",
+    "lago",
+    "azul",
+    "pirata"
+   ],
+   "arquivo": "mar_3.png"
+  },
+  {
+   "id": "deserto_1",
+   "tema": "deserto",
+   "rotulo": "Deserto com oásis",
+   "palavras": [
+    "deserto",
+    "areia",
+    "duna",
+    "cacto",
+    "oasis",
+    "seco",
+    "sol",
+    "saara",
+    "egito"
+   ],
+   "arquivo": "deserto_1.png"
+  },
+  {
+   "id": "deserto_2",
+   "tema": "deserto",
+   "rotulo": "Deserto com oásis 2",
+   "palavras": [
+    "deserto",
+    "areia",
+    "duna",
+    "cacto",
+    "oasis",
+    "seco",
+    "sol",
+    "saara",
+    "egito"
+   ],
+   "arquivo": "deserto_2.png"
+  },
+  {
+   "id": "deserto_3",
+   "tema": "deserto",
+   "rotulo": "Deserto com oásis 3",
+   "palavras": [
+    "deserto",
+    "areia",
+    "duna",
+    "cacto",
+    "oasis",
+    "seco",
+    "sol",
+    "saara",
+    "egito"
+   ],
+   "arquivo": "deserto_3.png"
+  },
+  {
+   "id": "cidade_1",
+   "tema": "cidade",
+   "rotulo": "Cidade vista do alto",
+   "palavras": [
+    "cidade",
+    "predio",
+    "rua",
+    "carro",
+    "telhado",
+    "metropole",
+    "urbano",
+    "neon",
+    "bairro"
+   ],
+   "arquivo": "cidade_1.png"
+  },
+  {
+   "id": "cidade_2",
+   "tema": "cidade",
+   "rotulo": "Cidade vista do alto 2",
+   "palavras": [
+    "cidade",
+    "predio",
+    "rua",
+    "carro",
+    "telhado",
+    "metropole",
+    "urbano",
+    "neon",
+    "bairro"
+   ],
+   "arquivo": "cidade_2.png"
+  },
+  {
+   "id": "cidade_3",
+   "tema": "cidade",
+   "rotulo": "Cidade vista do alto 3",
+   "palavras": [
+    "cidade",
+    "predio",
+    "rua",
+    "carro",
+    "telhado",
+    "metropole",
+    "urbano",
+    "neon",
+    "bairro"
+   ],
+   "arquivo": "cidade_3.png"
+  },
+  {
+   "id": "espaco_1",
+   "tema": "espaco",
+   "rotulo": "Espaço sideral",
+   "palavras": [
+    "espaco",
+    "estrela",
+    "planeta",
+    "galaxia",
+    "universo",
+    "meteoro",
+    "asteroide",
+    "noite",
+    "lua",
+    "foguete"
+   ],
+   "arquivo": "espaco_1.png"
+  },
+  {
+   "id": "espaco_2",
+   "tema": "espaco",
+   "rotulo": "Espaço sideral 2",
+   "palavras": [
+    "espaco",
+    "estrela",
+    "planeta",
+    "galaxia",
+    "universo",
+    "meteoro",
+    "asteroide",
+    "noite",
+    "lua",
+    "foguete"
+   ],
+   "arquivo": "espaco_2.png"
+  },
+  {
+   "id": "espaco_3",
+   "tema": "espaco",
+   "rotulo": "Espaço sideral 3",
+   "palavras": [
+    "espaco",
+    "estrela",
+    "planeta",
+    "galaxia",
+    "universo",
+    "meteoro",
+    "asteroide",
+    "noite",
+    "lua",
+    "foguete"
+   ],
+   "arquivo": "espaco_3.png"
+  },
+  {
+   "id": "vulcao_1",
+   "tema": "vulcao",
+   "rotulo": "Vulcão com lava",
+   "palavras": [
+    "vulcao",
+    "lava",
+    "fogo",
+    "magma",
+    "inferno",
+    "dragao",
+    "rocha",
+    "quente",
+    "pedra"
+   ],
+   "arquivo": "vulcao_1.png"
+  },
+  {
+   "id": "vulcao_2",
+   "tema": "vulcao",
+   "rotulo": "Vulcão com lava 2",
+   "palavras": [
+    "vulcao",
+    "lava",
+    "fogo",
+    "magma",
+    "inferno",
+    "dragao",
+    "rocha",
+    "quente",
+    "pedra"
+   ],
+   "arquivo": "vulcao_2.png"
+  },
+  {
+   "id": "vulcao_3",
+   "tema": "vulcao",
+   "rotulo": "Vulcão com lava 3",
+   "palavras": [
+    "vulcao",
+    "lava",
+    "fogo",
+    "magma",
+    "inferno",
+    "dragao",
+    "rocha",
+    "quente",
+    "pedra"
+   ],
+   "arquivo": "vulcao_3.png"
+  },
+  {
+   "id": "neve_1",
+   "tema": "neve",
+   "rotulo": "Neve e lago gelado",
+   "palavras": [
+    "neve",
+    "gelo",
+    "inverno",
+    "polo",
+    "frio",
+    "natal",
+    "pinguim",
+    "geleira",
+    "branco"
+   ],
+   "arquivo": "neve_1.png"
+  },
+  {
+   "id": "neve_2",
+   "tema": "neve",
+   "rotulo": "Neve e lago gelado 2",
+   "palavras": [
+    "neve",
+    "gelo",
+    "inverno",
+    "polo",
+    "frio",
+    "natal",
+    "pinguim",
+    "geleira",
+    "branco"
+   ],
+   "arquivo": "neve_2.png"
+  },
+  {
+   "id": "neve_3",
+   "tema": "neve",
+   "rotulo": "Neve e lago gelado 3",
+   "palavras": [
+    "neve",
+    "gelo",
+    "inverno",
+    "polo",
+    "frio",
+    "natal",
+    "pinguim",
+    "geleira",
+    "branco"
+   ],
+   "arquivo": "neve_3.png"
+  },
+  {
+   "id": "arquipelago_1",
+   "tema": "arquipelago",
+   "rotulo": "Arquipélago (pixel)",
+   "palavras": [
+    "ilha",
+    "ilhas",
+    "arquipelago",
+    "mar",
+    "praia",
+    "vila",
+    "casa",
+    "aldeia",
+    "tropical",
+    "pirata"
+   ],
+   "arquivo": "arquipelago_1.png"
+  },
+  {
+   "id": "arquipelago_2",
+   "tema": "arquipelago",
+   "rotulo": "Arquipélago (pixel) 2",
+   "palavras": [
+    "ilha",
+    "ilhas",
+    "arquipelago",
+    "mar",
+    "praia",
+    "vila",
+    "casa",
+    "aldeia",
+    "tropical",
+    "pirata"
+   ],
+   "arquivo": "arquipelago_2.png"
+  },
+  {
+   "id": "arquipelago_3",
+   "tema": "arquipelago",
+   "rotulo": "Arquipélago (pixel) 3",
+   "palavras": [
+    "ilha",
+    "ilhas",
+    "arquipelago",
+    "mar",
+    "praia",
+    "vila",
+    "casa",
+    "aldeia",
+    "tropical",
+    "pirata"
+   ],
+   "arquivo": "arquipelago_3.png"
+  },
+  {
+   "id": "galaxia_1",
+   "tema": "galaxia",
+   "rotulo": "Galáxia com planetas (HD)",
+   "palavras": [
+    "galaxia",
+    "planeta",
+    "planetas",
+    "espaco",
+    "nebulosa",
+    "estrela",
+    "universo",
+    "sideral",
+    "cosmos"
+   ],
+   "arquivo": "galaxia_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "galaxia_2",
+   "tema": "galaxia",
+   "rotulo": "Galáxia com planetas (HD) 2",
+   "palavras": [
+    "galaxia",
+    "planeta",
+    "planetas",
+    "espaco",
+    "nebulosa",
+    "estrela",
+    "universo",
+    "sideral",
+    "cosmos"
+   ],
+   "arquivo": "galaxia_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "galaxia_3",
+   "tema": "galaxia",
+   "rotulo": "Galáxia com planetas (HD) 3",
+   "palavras": [
+    "galaxia",
+    "planeta",
+    "planetas",
+    "espaco",
+    "nebulosa",
+    "estrela",
+    "universo",
+    "sideral",
+    "cosmos"
+   ],
+   "arquivo": "galaxia_3.jpg",
+   "hd": true
+  },
+  {
+   "id": "campo_hd_1",
+   "tema": "campo_hd",
+   "rotulo": "Campo verde (HD)",
+   "palavras": [
+    "campo",
+    "grama",
+    "verde",
+    "pedras",
+    "arbustos",
+    "prado",
+    "gramado"
+   ],
+   "arquivo": "campo_hd_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "campo_hd_2",
+   "tema": "campo_hd",
+   "rotulo": "Campo verde (HD) 2",
+   "palavras": [
+    "campo",
+    "grama",
+    "verde",
+    "pedras",
+    "arbustos",
+    "prado",
+    "gramado"
+   ],
+   "arquivo": "campo_hd_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "deserto_hd_1",
+   "tema": "deserto_hd",
+   "rotulo": "Areia e pedras (HD)",
+   "palavras": [
+    "deserto",
+    "areia",
+    "pedras",
+    "seco",
+    "praia",
+    "dunas"
+   ],
+   "arquivo": "deserto_hd_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "deserto_hd_2",
+   "tema": "deserto_hd",
+   "rotulo": "Areia e pedras (HD) 2",
+   "palavras": [
+    "deserto",
+    "areia",
+    "pedras",
+    "seco",
+    "praia",
+    "dunas"
+   ],
+   "arquivo": "deserto_hd_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "canion_hd_1",
+   "tema": "canion_hd",
+   "rotulo": "Cânion de terra (HD)",
+   "palavras": [
+    "canion",
+    "terra",
+    "barro",
+    "pedras",
+    "montanha",
+    "vale",
+    "rochoso"
+   ],
+   "arquivo": "canion_hd_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "canion_hd_2",
+   "tema": "canion_hd",
+   "rotulo": "Cânion de terra (HD) 2",
+   "palavras": [
+    "canion",
+    "terra",
+    "barro",
+    "pedras",
+    "montanha",
+    "vale",
+    "rochoso"
+   ],
+   "arquivo": "canion_hd_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "mar_hd_1",
+   "tema": "mar_hd",
+   "rotulo": "Mar com ilhas (HD)",
+   "palavras": [
+    "mar",
+    "oceano",
+    "ilha",
+    "ilhas",
+    "praia",
+    "pirata",
+    "navio",
+    "agua",
+    "tropical",
+    "coqueiro"
+   ],
+   "arquivo": "mar_hd_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "mar_hd_2",
+   "tema": "mar_hd",
+   "rotulo": "Mar com ilhas (HD) 2",
+   "palavras": [
+    "mar",
+    "oceano",
+    "ilha",
+    "ilhas",
+    "praia",
+    "pirata",
+    "navio",
+    "agua",
+    "tropical",
+    "coqueiro"
+   ],
+   "arquivo": "mar_hd_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "mar_hd_3",
+   "tema": "mar_hd",
+   "rotulo": "Mar com ilhas (HD) 3",
+   "palavras": [
+    "mar",
+    "oceano",
+    "ilha",
+    "ilhas",
+    "praia",
+    "pirata",
+    "navio",
+    "agua",
+    "tropical",
+    "coqueiro"
+   ],
+   "arquivo": "mar_hd_3.jpg",
+   "hd": true
+  },
+  {
+   "id": "floresta_hd_1",
+   "tema": "floresta_hd",
+   "rotulo": "Floresta com vila (HD)",
+   "palavras": [
+    "floresta",
+    "mata",
+    "arvore",
+    "bosque",
+    "vila",
+    "estrada",
+    "fazenda",
+    "natureza",
+    "medieval"
+   ],
+   "arquivo": "floresta_hd_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "floresta_hd_2",
+   "tema": "floresta_hd",
+   "rotulo": "Floresta com vila (HD) 2",
+   "palavras": [
+    "floresta",
+    "mata",
+    "arvore",
+    "bosque",
+    "vila",
+    "estrada",
+    "fazenda",
+    "natureza",
+    "medieval"
+   ],
+   "arquivo": "floresta_hd_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "floresta_hd_3",
+   "tema": "floresta_hd",
+   "rotulo": "Floresta com vila (HD) 3",
+   "palavras": [
+    "floresta",
+    "mata",
+    "arvore",
+    "bosque",
+    "vila",
+    "estrada",
+    "fazenda",
+    "natureza",
+    "medieval"
+   ],
+   "arquivo": "floresta_hd_3.jpg",
+   "hd": true
+  },
+  {
+   "id": "cidade_hd_1",
+   "tema": "cidade_hd",
+   "rotulo": "Cidade vista do alto (HD)",
+   "palavras": [
+    "cidade",
+    "predio",
+    "rua",
+    "carro",
+    "metropole",
+    "urbano",
+    "bairro",
+    "telhado",
+    "heliponto"
+   ],
+   "arquivo": "cidade_hd_1.jpg",
+   "hd": true
+  },
+  {
+   "id": "cidade_hd_2",
+   "tema": "cidade_hd",
+   "rotulo": "Cidade vista do alto (HD) 2",
+   "palavras": [
+    "cidade",
+    "predio",
+    "rua",
+    "carro",
+    "metropole",
+    "urbano",
+    "bairro",
+    "telhado",
+    "heliponto"
+   ],
+   "arquivo": "cidade_hd_2.jpg",
+   "hd": true
+  },
+  {
+   "id": "cidade_hd_3",
+   "tema": "cidade_hd",
+   "rotulo": "Cidade vista do alto (HD) 3",
+   "palavras": [
+    "cidade",
+    "predio",
+    "rua",
+    "carro",
+    "metropole",
+    "urbano",
+    "bairro",
+    "telhado",
+    "heliponto"
+   ],
+   "arquivo": "cidade_hd_3.jpg",
+   "hd": true
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+  "versao": 1,
+  "nota": "Perfis de era do Fliperama (BLUEPRINT Fliperama §2.1). Fonte ÚNICA: o motor (motor.js) e o validador (engine/fliperama/esquema.py) leem este arquivo. Números aproximados das máquinas reais; o objetivo é a cara e as restrições da era, não emulação.",
+  "perfis": {
+    "2600": {
+      "nome": "Era 2600", "apelido": "estilo Atari 2600",
+      "w": 160, "h": 192, "tile": 8,
+      "sprite_max": [16, 16], "cores_por_sprite": 1, "cor_por_linha": true, "canais": 2, "parallax": 0,
+      "paleta": ["#000000", "#FFFFFF", "#3C58C8", "#2C2C9C", "#7C5C1C", "#A04C00", "#D87F2D", "#C89C3C",
+                 "#B83C3C", "#E0A0A0", "#5CA040", "#3CA0A0", "#E8E85C", "#9C3C9C", "#6C6C6C", "#B0B0B0"]
+    },
+    "8bits": {
+      "nome": "8 bits", "apelido": "estilo NES",
+      "w": 256, "h": 240, "tile": 8,
+      "sprite_max": [16, 16], "cores_por_sprite": 3, "canais": 4, "parallax": 0,
+      "paleta": ["#7C7C7C", "#0000FC", "#0000BC", "#4428BC", "#940084", "#A80020", "#A81000", "#881400",
+                 "#503000", "#007800", "#006800", "#005800", "#004058", "#000000", "#BCBCBC", "#0078F8",
+                 "#0058F8", "#6844FC", "#D800CC", "#E40058", "#F83800", "#E45C10", "#AC7C00", "#00B800",
+                 "#00A800", "#00A844", "#008888", "#F8F8F8", "#3CBCFC", "#6888FC", "#9878F8", "#F878F8",
+                 "#F85898", "#F87858", "#FCA044", "#F8B800", "#B8F818", "#58D854", "#58F898", "#00E8D8",
+                 "#787878", "#FCFCFC", "#A4E4FC", "#B8B8F8", "#D8B8F8", "#F8B8F8", "#F8A4C0", "#F0D0B0",
+                 "#FCE0A8", "#F8D878", "#D8F878", "#B8F8B8", "#B8F8D8", "#00FCFC", "#F8D8F8"]
+    },
+    "portatil": {
+      "nome": "Portátil", "apelido": "estilo Game Boy",
+      "w": 160, "h": 144, "tile": 8,
+      "sprite_max": [16, 16], "cores_por_sprite": 3, "canais": 4, "parallax": 0,
+      "paleta": ["#0F380F", "#306230", "#8BAC0F", "#9BBC0F"]
+    },
+    "16a": {
+      "nome": "16 bits A", "apelido": "estilo Super Nintendo",
+      "w": 256, "h": 224, "tile": 16,
+      "sprite_max": [32, 32], "cores_por_sprite": 15, "canais": 8, "parallax": 3,
+      "paleta": null
+    },
+    "16b": {
+      "nome": "16 bits B", "apelido": "estilo Mega Drive",
+      "w": 320, "h": 224, "tile": 16,
+      "sprite_max": [32, 32], "cores_por_sprite": 15, "canais": 9, "parallax": 2,
+      "paleta": "rgb333"
+    },
+    "arcade": {
+      "nome": "Arcade 90", "apelido": "estilo fliperama anos 90",
+      "w": 384, "h": 224, "tile": 16,
+      "sprite_max": [64, 64], "cores_por_sprite": null, "canais": 16, "parallax": 3,
+      "paleta": null
+    }
+  }
+}

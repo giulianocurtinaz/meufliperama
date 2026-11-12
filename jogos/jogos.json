@@ -1,0 +1,168 @@
+{
+ "gerado": "12/11/2026 20:28",
+ "motor": "0.9.9",
+ "jogos": [
+  {
+   "slug": "aero-wings",
+   "nome": "Aero Wings",
+   "autor": "andre",
+   "demo": false,
+   "genero": "nave",
+   "perfil": "16a",
+   "capa": true
+  },
+  {
+   "slug": "meu-rio",
+   "nome": "MEU RIO",
+   "autor": "andre",
+   "demo": false,
+   "genero": "nave",
+   "perfil": "2600",
+   "capa": true
+  },
+  {
+   "slug": "river-ride",
+   "nome": "river ride",
+   "autor": "andre",
+   "demo": false,
+   "genero": "nave",
+   "perfil": "2600",
+   "capa": true
+  },
+  {
+   "slug": "reino-dos-cogumelos-andre",
+   "nome": "REINO DOS COGUMELOS (ANDRE)",
+   "autor": "andre",
+   "demo": false,
+   "genero": "plataforma",
+   "perfil": "8bits",
+   "capa": false
+  },
+  {
+   "slug": "atravesse-a-rua",
+   "nome": "atravesse a rua",
+   "autor": "andre",
+   "demo": false,
+   "genero": "travessia",
+   "perfil": "16a",
+   "capa": true
+  },
+  {
+   "slug": "tiro-au-alvo",
+   "nome": "tiro au alvo",
+   "autor": "andre",
+   "demo": false,
+   "genero": "tiro_fixo",
+   "perfil": "16a",
+   "capa": true
+  },
+  {
+   "slug": "fuja-das-tartarugas",
+   "nome": "fuja das tartarugas",
+   "autor": "andre",
+   "demo": false,
+   "genero": "labirinto",
+   "perfil": "2600",
+   "capa": true
+  },
+  {
+   "slug": "nintendo-esportes",
+   "nome": "nintendo esportes",
+   "autor": "andre",
+   "demo": false,
+   "genero": "esporte",
+   "perfil": "16a",
+   "capa": true
+  },
+  {
+   "slug": "ghoste",
+   "nome": "ghoste",
+   "autor": "andre",
+   "demo": false,
+   "genero": "aventura",
+   "perfil": "16a",
+   "capa": true
+  },
+  {
+   "slug": "vale-monstrinhos-3d",
+   "nome": "Vale dos Monstrinhos (3D)",
+   "autor": "🤖 Demo do Fliperama",
+   "demo": true,
+   "genero": null,
+   "perfil": null,
+   "capa": false
+  },
+  {
+   "slug": "dinossauro-no-espaco",
+   "nome": "Dinossauro no Espaço",
+   "autor": "andre",
+   "demo": false,
+   "genero": "plataforma",
+   "perfil": "2600",
+   "capa": true
+  },
+  {
+   "slug": "planeta-aliens-hd",
+   "nome": "Planeta dos Aliens (HD)",
+   "autor": "🤖 Demo do Fliperama",
+   "demo": true,
+   "genero": null,
+   "perfil": null,
+   "capa": false
+  },
+  {
+   "slug": "expedicao-aventureiro-16bits",
+   "nome": "Expedição do Aventureiro (16 bits)",
+   "autor": "🤖 Demo do Fliperama",
+   "demo": true,
+   "genero": null,
+   "perfil": null,
+   "capa": false
+  },
+  {
+   "slug": "reino-cogumelos-phaser",
+   "nome": "Reino dos Cogumelos (Phaser)",
+   "autor": "🤖 Demo do Fliperama",
+   "demo": true,
+   "genero": null,
+   "perfil": null,
+   "capa": false
+  },
+  {
+   "slug": "reino-cogumelos-demo",
+   "nome": "Reino dos Cogumelos Gigantes (demo)",
+   "autor": "🤖 Demo do Fliperama",
+   "demo": true,
+   "genero": null,
+   "perfil": null,
+   "capa": false
+  },
+  {
+   "slug": "robo-no-espaco",
+   "nome": "Robô no Espaço",
+   "autor": "andre",
+   "demo": false,
+   "genero": "nave",
+   "perfil": "16b",
+   "capa": true
+  },
+  {
+   "slug": "vem-pra-cima",
+   "nome": "vem pra cima",
+   "autor": "andre",
+   "demo": false,
+   "genero": "briga_de_rua",
+   "perfil": "16b",
+   "capa": true
+  },
+  {
+   "slug": "gato-em-marte",
+   "nome": "Gato em Marte",
+   "autor": "🤖 Demo do Fliperama",
+   "demo": true,
+   "genero": null,
+   "perfil": null,
+   "capa": false
+  }
+ ]
+}
