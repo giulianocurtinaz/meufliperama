@@ -17,6 +17,132 @@
 <a id="voltar" href="/jogos/">← Jogos</a>
 <div id="jogo"><div id="aviso">carregando o jogo…</div></div>
 
+
+<style>
+  #cel-bt { position: fixed; top: 10px; right: 10px; z-index: 9; color: #fff; background: rgba(0,0,0,.55); border: 0; cursor: pointer;
+            font: 600 14px system-ui, sans-serif; padding: 6px 12px; border-radius: 8px; }
+  #cel-cx { position: fixed; right: 12px; bottom: 12px; z-index: 12; display: none; align-items: center; gap: 12px; color: #f1f5f9;
+            background: rgba(11,11,26,.92); border: 3px solid #f8b800; border-radius: 14px; padding: 10px 14px; font: 15px system-ui, sans-serif; }
+  #cel-cx.on { display: flex; }
+  #cel-cx canvas { width: 132px; height: 132px; image-rendering: pixelated; background: #fff; padding: 4px; border-radius: 8px; }
+  #cel-cx b.cod { color: #f8b800; font-size: 26px; letter-spacing: 4px; }
+  #cel-cx .x { cursor: pointer; opacity: .7; align-self: flex-start; }
+  #pad { position: fixed; left: 0; right: 0; bottom: 0; z-index: 11; display: none; justify-content: space-between; padding: 10px 14px 18px;
+         pointer-events: none; user-select: none; -webkit-user-select: none; touch-action: none; }
+  #pad.on { display: flex; }
+  #pad .cruz { position: relative; width: 156px; height: 156px; pointer-events: auto; }
+  #pad .t { position: absolute; width: 52px; height: 52px; background: rgba(255,255,255,.18); border: 2px solid rgba(255,255,255,.35);
+            border-radius: 12px; color: #fff; font: 700 22px system-ui; display: flex; align-items: center; justify-content: center; }
+  #pad .t.on, #pad .b.on { background: rgba(248,184,0,.55); }
+  #pad .bts { display: flex; gap: 12px; align-items: flex-end; pointer-events: auto; }
+  #pad .b { width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,.18); border: 2px solid rgba(255,255,255,.35);
+            color: #fff; font: 700 20px system-ui; display: flex; align-items: center; justify-content: center; }
+  #pad .b.peq { width: 54px; height: 40px; border-radius: 10px; font-size: 12px; }
+</style>
+<button id="cel-bt" title="Use o celular como controle">📱 Celular como controle</button>
+<div id="cel-cx"></div>
+<div id="pad">
+  <div class="cruz">
+    <div class="t" data-k="cima" style="left:52px;top:0">▲</div><div class="t" data-k="esq" style="left:0;top:52px">◀</div>
+    <div class="t" data-k="dir" style="left:104px;top:52px">▶</div><div class="t" data-k="baixo" style="left:52px;top:104px">▼</div>
+  </div>
+  <div class="bts"><div class="b peq" data-k="start">START</div><div class="b" data-k="bomba">B</div><div class="b" data-k="pulo">A</div></div>
+</div>
+<script>
+(function () {
+  // 📱 12/11/2026 — celular como controle (a mesma ponte da TV, sala sem login) + controles na tela no próprio celular
+  var API = 'https://jogar.meufliperama.com.br', QR = '/estudio/fliperama/qrcode.js';
+  function F() { return window.__fliperama; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  var toque = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  var bt = document.getElementById('cel-bt'), cx = document.getElementById('cel-cx');
+  // ── controles na tela (jogando no próprio celular) ──
+  if (toque) {
+    bt.style.display = 'none';
+    var pad = document.getElementById('pad'), est = {};
+    pad.className = 'on';
+    Array.prototype.forEach.call(pad.querySelectorAll('[data-k]'), function (el) {
+      var k = el.getAttribute('data-k');
+      function liga(v) { return function (ev) { ev.preventDefault(); est[k] = v; el.classList.toggle('on', v); if (F() && F().controle) { F().controle(1, est); } }; }
+      el.addEventListener('touchstart', liga(true), { passive: false });
+      el.addEventListener('touchend', liga(false), { passive: false });
+      el.addEventListener('touchcancel', liga(false), { passive: false });
+    });
+    return;
+  }
+  // ── celular como controle (jogo no computador/TV) ──
+  var S = { sala: null, ws: null, slots: {}, porCid: {} };
+  function aviso(t) { cx.innerHTML = '<div>' + esc(t) + '</div><span class="x">✕</span>'; cx.className = 'on'; cx.querySelector('.x').onclick = function () { cx.className = ''; }; }
+  function comQR(cb) { if (window.qrcode) { return cb(); } var sc = document.createElement('script'); sc.src = QR; sc.onload = cb; sc.onerror = cb; document.head.appendChild(sc); }
+  function desenhar() {
+    if (!S.sala) { return; }
+    var j = [1, 2].map(function (n) { return S.slots[n] ? 'J' + n + ' ✔' : ''; }).filter(Boolean).join(' · ');
+    cx.innerHTML = '<div>📱 Aponte a câmera do celular<br>ou abra <b>' + esc(S.sala.controle.replace(/\?.*$/, '').replace(/^https?:\/\//, '')) + '</b><br>código <b class="cod">' + esc(S.sala.codigo) + '</b>' +
+                   (j ? '<br>' + j : '<br><small>até 2 celulares</small>') + '</div><span class="x" title="esconder">✕</span>';
+    try {
+      var q = qrcode(0, 'M'); q.addData(S.sala.controle); q.make();
+      var n = q.getModuleCount(), c = document.createElement('canvas'); c.width = n; c.height = n;
+      var x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, n, n); x.fillStyle = '#000';
+      for (var r = 0; r < n; r++) { for (var cc = 0; cc < n; cc++) { if (q.isDark(r, cc)) { x.fillRect(cc, r, 1, 1); } } }
+      cx.insertBefore(c, cx.firstChild);
+    } catch (e) {}
+    cx.className = 'on';
+    cx.querySelector('.x').onclick = function () { cx.className = ''; };
+  }
+  function para(cid, m) { m.para = cid; if (S.ws && S.ws.readyState === 1) { S.ws.send(JSON.stringify(m)); } }
+  function oi(cid, m) {
+    var livre = [m.quer, 1, 2].filter(function (n) { return (n === 1 || n === 2) && (!S.slots[n] || S.slots[n].cid === cid || Date.now() - (S.slots[n].visto || 0) > 4000); })[0];
+    if (!livre) { para(cid, { t: 'cheio' }); return; }
+    if (S.slots[livre] && S.slots[livre].cid !== cid) { delete S.porCid[S.slots[livre].cid]; }
+    var sl = { n: livre, cid: cid, visto: Date.now(), seq: 0, k: {} };
+    S.slots[livre] = sl; S.porCid[cid] = sl;
+    para(cid, { t: 'vaga', slot: livre });
+    if (livre === 2 && F() && F().doisJogadores) { F().doisJogadores(true); }
+    para(cid, { t: 'jogo', nome: document.title.split(' · ')[0], dois: livre === 2 });
+    desenhar();
+  }
+  function teclas(cid, m) {
+    var sl = S.porCid[cid]; if (!sl) { return; }
+    if (m.s != null) { if (m.s <= (sl.seq || 0)) { return; } sl.seq = m.s; }
+    sl.visto = Date.now();
+    var k = m.k || {}, antes = sl.k || {}; sl.k = k;
+    var semPausa = {}; Object.keys(k).forEach(function (x) { if (x !== 'pausa') { semPausa[x] = k[x]; } });
+    if (F() && F().controle) { F().controle(sl.n, semPausa); }
+    if (k.pausa && !antes.pausa) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); }
+  }
+  function saiu(cid) {
+    var sl = S.porCid[cid]; if (!sl) { return; }
+    delete S.porCid[cid]; if (S.slots[sl.n] === sl) { delete S.slots[sl.n]; }
+    if (F() && F().controle) { F().controle(sl.n, {}); }
+    if (sl.n === 2 && F() && F().doisJogadores) { F().doisJogadores(false); }
+    desenhar();
+  }
+  setInterval(function () { Object.keys(S.porCid).forEach(function (cid) { if (Date.now() - (S.porCid[cid].visto || 0) > 3000) { saiu(cid); } }); }, 1000);
+  function ligar() {
+    if (!S.sala) { return; }
+    var base = API ? API.replace(/^http/, 'ws') : (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host;
+    var ws = new WebSocket(base + '/publico/fliperama/ponte/ws?papel=tv&sala=' + S.sala.codigo + '&chave=' + encodeURIComponent(S.sala.chave));
+    S.ws = ws;
+    ws.onmessage = function (ev) {
+      var m; try { m = JSON.parse(ev.data); } catch (e) { return; }
+      var cid = m.de; if (!cid) { return; }
+      if (m.t === 'oi') { oi(cid, m); }
+      else if (m.t === 'k') { if (!S.porCid[cid]) { oi(cid, {}); } teclas(cid, m); }
+      else if (m.t === 'tchau') { saiu(cid); }
+    };
+    ws.onclose = function (ev) { if (ev.code === 4404) { S.sala = null; aviso('O código venceu — clique em 📱 de novo.'); return; } setTimeout(ligar, 2000); };
+  }
+  bt.onclick = function () {
+    if (S.sala) { cx.className = cx.className ? '' : 'on'; return; }
+    bt.disabled = true;
+    fetch(API + '/publico/fliperama/sala', { method: 'POST' })
+      .then(function (r) { return r.json().then(function (j) { return [r.ok, j]; }); })
+      .then(function (rj) { bt.disabled = false; if (!rj[0]) { aviso((rj[1] && rj[1].detail) || 'Não deu para abrir o controle agora.'); return; } S.sala = rj[1]; comQR(desenhar); ligar(); })
+      .catch(function () { bt.disabled = false; aviso('O controle pelo celular está fora do ar agora — dá para jogar pelo teclado.'); });
+  };
+})();
+</script>
+
 <script>
 (async function () {
   var raiz = document.getElementById('jogo');
