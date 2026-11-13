@@ -1,5 +1,5 @@
 {
- "gerado": "12/11/2026 21:10",
+ "gerado": "12/11/2026 21:18",
  "motor": "0.9.9-f03f56",
  "jogos": [
   {
@@ -135,7 +135,7 @@
    "demo": true,
    "genero": null,
    "perfil": null,
-   "capa": false
+   "capa": true
   },
   {
    "slug": "robo-no-espaco",
@@ -162,7 +162,7 @@
    "demo": true,
    "genero": null,
    "perfil": null,
-   "capa": false
+   "capa": true
   }
  ]
 }
