@@ -1,5 +1,5 @@
 {
- "gerado": "12/11/2026 21:18",
+ "gerado": "12/11/2026 21:46",
  "motor": "0.9.9-f03f56",
  "jogos": [
   {
@@ -36,7 +36,7 @@
    "demo": false,
    "genero": "plataforma",
    "perfil": "8bits",
-   "capa": false
+   "capa": true
   },
   {
    "slug": "atravesse-a-rua",
@@ -90,7 +90,7 @@
    "demo": true,
    "genero": null,
    "perfil": null,
-   "capa": false
+   "capa": true
   },
   {
    "slug": "dinossauro-no-espaco",
@@ -108,7 +108,7 @@
    "demo": true,
    "genero": null,
    "perfil": null,
-   "capa": false
+   "capa": true
   },
   {
    "slug": "expedicao-aventureiro-16bits",
