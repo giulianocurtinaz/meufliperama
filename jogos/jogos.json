@@ -1,5 +1,5 @@
 {
- "gerado": "12/11/2026 21:46",
+ "gerado": "12/11/2026 22:16",
  "motor": "0.9.9-f03f56",
  "jogos": [
   {
@@ -117,7 +117,7 @@
    "demo": true,
    "genero": null,
    "perfil": null,
-   "capa": false
+   "capa": true
   },
   {
    "slug": "reino-cogumelos-phaser",
@@ -126,7 +126,7 @@
    "demo": true,
    "genero": null,
    "perfil": null,
-   "capa": false
+   "capa": true
   },
   {
    "slug": "reino-cogumelos-demo",
