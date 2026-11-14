@@ -17,7 +17,8 @@
 (function () {
   'use strict';
 
-  var VERSAO = '0.9.9';   // 0.9.9 (30/10/2026): nave no jeito rio, combustível, pontes, acorda/cruza
+  var VERSAO = '0.9.10';   // 0.9.10 (13/11/2026): 🎮 regras de jogabilidade (jogabilidade_mobile) + escala livre do app do celular
+  // 0.9.9 (30/10/2026): nave no jeito rio, combustível, pontes, acorda/cruza
   var PASSO = 1000 / 60;
 
   // ───────────────────────── utilidades ─────────────────────────
@@ -4618,6 +4619,57 @@
     r.apertou = function (k) { return r[k] && !(antes || {})[k]; };
     return r;
   }
+  // ───────────────────────── 🎮 JOGABILIDADE (13/11/2026, decisões do autor — blueprint-fliperama-mobile-first §2.2) ─────────
+  // Quem CRIA o jogo escolhe as REGRAS de jogabilidade (spec.jogabilidade_mobile) e pode liberar algumas para o JOGADOR
+  // escolher. Cada regra vira uma transformação DETERMINÍSTICA das teclas, aplicada só com o jogo em 'jogando' — igual
+  // ao vivo e no replay do placar. A gravação guarda as teclas CRUAS; o replay recebe o `modo` e transforma de novo.
+  // modo = "k=v;k=v" só das regras que fogem do clássico (modo "" = o jogo de sempre — os placares antigos continuam).
+  // spec.jogabilidade_mobile = { tiro: {padrao:'auto', livre:true, alternativas:['botao','auto']}, controle: {...}, ... }
+  var REGRAS_CLASSICAS = { tiro: 'botao', rolagem: 'heroi', pulo: 'variavel', aceleracao: 'botao' };
+  var REGRAS_VALORES = { tiro: ['botao', 'auto'], rolagem: ['heroi', 'sozinho'], pulo: ['variavel', 'fixo'], aceleracao: ['botao', 'auto'] };
+  function regrasDoGenero(spec) {
+    var g = spec && spec.arquetipo, rio = ((spec && spec.fisica) || {}).voo === 'rio', r = [];
+    if (g === 'nave' || g === 'tiro_fixo') { r.push('tiro'); }
+    if (g === 'plataforma') { r.push('rolagem', 'pulo'); }
+    if (g === 'nave' && rio) { r.push('aceleracao'); }
+    return r;
+  }
+  function lerModo(txt) {
+    var o = {};
+    String(txt || '').split(';').forEach(function (p) { var kv = p.split('='); if (kv.length === 2 && kv[0]) { o[kv[0].trim()] = kv[1].trim(); } });
+    return o;
+  }
+  function jogabilidade(spec, escolhas) {
+    var jm = (spec && spec.jogabilidade_mobile) || {}, regras = {}, livres = {}, partes = [];
+    if (typeof escolhas === 'string') {   // um modo ("tiro=auto"): a regra que não aparece é a CLÁSSICA (é assim que o modo é escrito)
+      var lido = lerModo(escolhas); escolhas = {};
+      regrasDoGenero(spec).forEach(function (k) { escolhas[k] = lido[k] || REGRAS_CLASSICAS[k]; });
+    }
+    escolhas = escolhas || {};
+    regrasDoGenero(spec).forEach(function (k) {
+      var o = jm[k] || {}, vals = REGRAS_VALORES[k];
+      var padrao = vals.indexOf(o.padrao) >= 0 ? o.padrao : REGRAS_CLASSICAS[k];
+      var pode = [padrao];
+      if (o.livre) { (o.alternativas || vals).forEach(function (v) { if (vals.indexOf(v) >= 0 && pode.indexOf(v) < 0) { pode.push(v); } }); }
+      regras[k] = pode.indexOf(escolhas[k]) >= 0 ? escolhas[k] : padrao;
+      if (pode.length > 1) { livres[k] = pode; }
+    });
+    Object.keys(regras).sort().forEach(function (k) { if (regras[k] !== REGRAS_CLASSICAS[k]) { partes.push(k + '=' + regras[k]); } });
+    return { regras: regras, livres: livres, modo: partes.join(';'), padrao: jm };
+  }
+  function aplicarModo(jogo, e, regras) {
+    if (!regras || jogo.estado !== 'jogando') { jogo.__mfPulo = 0; return e; }
+    var r = {}; Object.keys(e).forEach(function (k) { r[k] = e[k]; });
+    if (regras.tiro === 'auto') { r.pulo = true; }
+    if (regras.aceleracao === 'auto' && !r.baixo) { r.cima = true; }
+    if (regras.rolagem === 'sozinho' && !r.esq) { r.dir = true; }
+    if (regras.pulo === 'fixo') {
+      if (e.apertou && e.apertou('pulo')) { jogo.__mfPulo = 30; }      // toque curto = pulo inteiro
+      if (jogo.__mfPulo > 0) { r.pulo = true; jogo.__mfPulo--; } else { r.pulo = false; }
+    }
+    return r;
+  }
+
   var SOM_MUDO = { ligar: function () {}, efeito: function () {}, musica: function () {}, parar: function () {}, alternarMudo: function () {} };
   function simular(spec, perfis, op) {
     op = op || {};
@@ -4667,14 +4719,15 @@
     if (!Genero) { throw new Error('gênero ainda não existe no motor: ' + spec.arquetipo); }
     var jogo = new Genero(spec, perfil, montarSprites(spec), SOM_MUDO, op.semente || 20261024);
     var fila = lerGravacao(op.entradas), antes = {}, t0 = performance.now(), maxFase = 1;
+    var jg = jogabilidade(spec, op.modo || '');   // 🎮 o mesmo modo da partida (o servidor confere se é permitido)
     for (var k = 0; k < fila.length; k++) {
       var e = deMascara(fila[k]);
-      jogo.atualizar(entradaDe(e, antes)); antes = e;
+      jogo.atualizar(aplicarModo(jogo, entradaDe(e, antes), jg.regras)); antes = e;
       if (jogo.estado === 'jogando') { maxFase = Math.max(maxFase, jogo.faseIdx + 1); }
       if (k > 0 && (jogo.estado === 'fim_jogo' || jogo.estado === 'vitoria')) { break; }
     }
     return { pontos: jogo.pontos || 0, fase: maxFase, venceu: jogo.estado === 'vitoria', estado: jogo.estado,
-             quadros: fila.length, ms: Math.round(performance.now() - t0), versao: VERSAO };
+             quadros: fila.length, ms: Math.round(performance.now() - t0), versao: VERSAO, modo: jg.modo };
   }
 
   // 🎬 MODO ATRAÇÃO (TV e capa): o robô esperto joga NA TELA, em tempo real
@@ -5062,7 +5115,8 @@
       // 📐 29/10/2026 (autor): quem chama pode dizer a altura que cabe (opcoes.alturaMax) — o palco ocupa a largura toda
       var hMax = (typeof opcoes.alturaMax === 'function' && +opcoes.alturaMax()) || (window.innerHeight - 8);
       var kf = Math.min((r.width || window.innerWidth) / perfil.w, hMax / perfil.h);
-      var k = telaFina ? Math.max(1, kf) : Math.max(1, Math.floor(kf));   // pixel: múltiplo inteiro; turbinado/HD/3D: ocupa o espaço
+      // pixel: múltiplo inteiro; turbinado/HD/3D: ocupa o espaço. 📱 opcoes.escalaLivre (app do celular): ocupa sempre
+      var k = (telaFina || opcoes.escalaLivre) ? Math.max(opcoes.escalaLivre ? 0.5 : 1, kf) : Math.max(1, Math.floor(kf));
       tela.style.width = Math.floor(perfil.w * k) + 'px'; tela.style.height = Math.floor(perfil.h * k) + 'px';
       if (palco && palco.tela) { palco.tela.style.width = tela.style.width; palco.tela.style.height = tela.style.height; }
     }
@@ -5082,6 +5136,8 @@
 
     var spritesJogo = montarSprites(spec);
     var jogo = new Genero(spec, perfil, spritesJogo, new Som(spec, perfil), opcoes.semente || 20261024);
+    // 🎮 regras de jogabilidade: o padrão do dev + o que o jogador escolheu entre as liberadas (opcoes.jogabilidade)
+    var jg = jogabilidade(spec, opcoes.jogabilidade || {});
     entrada.teclado2 = !!jogo.usaTeclado2;   // ✈✈ esquadrilha: o 2º jogador joga no mesmo teclado (W A S D + F + G)
     // 🎨 estilos: pixel (o de sempre), turbinado, hd e 3d — por fase, com troca ao vivo
     var estForcado = {}, pele = criarPele(jogo, spec, spritesJogo, perfil), estTela = 'pixel';
@@ -5164,7 +5220,7 @@
                                : { headers: { Authorization: 'Bearer ' + token() } })
         .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
     }
-    function lerRecorde() { placarApi('/estudio/fliperama/placar/' + encodeURIComponent(opcoes.slug) + '?top=1').then(function (d) { if (d && d.placar && d.placar[0]) { jogo.recorde = d.placar[0]; } }); }
+    function lerRecorde() { placarApi('/estudio/fliperama/placar/' + encodeURIComponent(opcoes.slug) + '?top=1&modo=' + encodeURIComponent(jg.modo)).then(function (d) { if (d && d.placar && d.placar[0]) { jogo.recorde = d.placar[0]; } }); }
     if (opcoes.slug && opcoes.placar !== false) { lerRecorde(); }
     function depoisDoPasso(inp) {
       var e = jogo.estado;
@@ -5180,6 +5236,7 @@
         if (grav && jogo.pontos > 0) {
           var corpo = { slug: opcoes.slug, pontos: jogo.pontos, fase: jogo.faseIdx + 1, venceu: e === 'vitoria',
                         entradas: grav.texto(), quadros: grav.quadros(), semente: jogo.semente, versao: VERSAO,
+                        modo: jg.modo,                           // 🎮 regras desta partida (placar separado por modo)
                         jogador_id: opcoes.jogador || null };   // 📺 TV: quem está jogando
           jogo.placarMsg = 'ENVIANDO PARA O PLACAR...';
           placarApi('/estudio/fliperama/placar', corpo).then(function (r) {
@@ -5198,7 +5255,7 @@
       try {
         while (acumulado >= PASSO) {
           if (jogo.__roboEntrada) { var _e = jogo.__roboEntrada(); jogo.atualizar(entradaDe(_e, jogo.__antes)); jogo.__antes = _e; estadoAntes = jogo.estado; }
-          else { var _i = entrada.ler(); jogo.atualizar(_i); depoisDoPasso(_i); }
+          else { var _i = entrada.ler(); jogo.atualizar(aplicarModo(jogo, _i, jg.regras)); depoisDoPasso(_i); }
           acumulado -= PASSO;
         }
         desenharQuadro();
@@ -5229,7 +5286,7 @@
              estiloAtual: function () { return estiloDa(emJogo() ? (jogo.faseIdx || 0) : 0); },
              parar: function () { cancelAnimationFrame(raf); jogo.som.parar(); window.removeEventListener('resize', escalar); try { if (palco) { palco.destruir(); } } catch (e) { /* nada */ } },
              reconstruir: function () { /* a casa redesenha tudo a cada quadro */ }, telaDoJogo: function () { return tela; },
-             versao: VERSAO };
+             jogabilidade: jg, versao: VERSAO };
   }
 
   // ═══════════════════════ 🧬 CLONES (motor 0.9.8 · 26/10/2026, decisão do autor após a mini-bancada) ═══════════════════════
@@ -5407,7 +5464,7 @@
     })).then(function () { return B; });
   }
 
-  window.Fliperama = { _scale2x: function (c) { return scale2x(c); }, _mapaPeleHD: function (spec, B) { return mapaPeleHD(spec, B); }, iniciar: iniciar, simular: simular, atracao: atracao, repetir: repetir, _mascara: mascara, _gravador: gravador, versao: VERSAO, reportar: reportar, _generos: GENEROS, _sprites: montarSprites, _motores: MOTORES,
+  window.Fliperama = { _scale2x: function (c) { return scale2x(c); }, _mapaPeleHD: function (spec, B) { return mapaPeleHD(spec, B); }, iniciar: iniciar, simular: simular, atracao: atracao, repetir: repetir, jogabilidade: jogabilidade, _aplicarModo: aplicarModo, _mascara: mascara, _gravador: gravador, versao: VERSAO, reportar: reportar, _generos: GENEROS, _sprites: montarSprites, _motores: MOTORES,
                        // 🧩 motor 0.9: o motor Phaser (motor-phaser.js) reaproveita a simulação, as regras, o mágico e o som da casa
                        _timbres: TIMBRES, _musicasCasa: MUSICAS_BIBLIOTECA,
                        _kit: KIT, _svgKit: svgKit, _partesHD: partesHD, _clonesHD: clonesHD, _quadroClone: quadroClone, _encaixeHD: ENCAIXE_HD,

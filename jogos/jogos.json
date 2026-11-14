@@ -1,6 +1,6 @@
 {
- "gerado": "13/11/2026 11:28",
- "motor": "0.9.9-f03f56",
+ "gerado": "14/11/2026 17:21",
+ "motor": "0.9.10-034f84",
  "jogos": [
   {
    "slug": "aero-wings",
@@ -9,7 +9,11 @@
    "demo": false,
    "genero": "nave",
    "perfil": "16a",
-   "capa": true
+   "capa": true,
+   "capa_v": "38f880f7",
+   "versao": "2e753aee",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "meu-rio",
@@ -18,7 +22,11 @@
    "demo": false,
    "genero": "nave",
    "perfil": "2600",
-   "capa": true
+   "capa": true,
+   "capa_v": "d3f831b4",
+   "versao": "e0c03666",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "river-ride",
@@ -27,7 +35,11 @@
    "demo": false,
    "genero": "nave",
    "perfil": "2600",
-   "capa": true
+   "capa": true,
+   "capa_v": "c57b3007",
+   "versao": "8070263b",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "reino-dos-cogumelos-andre",
@@ -36,7 +48,11 @@
    "demo": false,
    "genero": "plataforma",
    "perfil": "8bits",
-   "capa": true
+   "capa": true,
+   "capa_v": "4a0c8145",
+   "versao": "ac0c8426",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "atravesse-a-rua",
@@ -45,7 +61,11 @@
    "demo": false,
    "genero": "travessia",
    "perfil": "16a",
-   "capa": true
+   "capa": true,
+   "capa_v": "22e5f3b3",
+   "versao": "35228222",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "tiro-au-alvo",
@@ -54,7 +74,11 @@
    "demo": false,
    "genero": "tiro_fixo",
    "perfil": "16a",
-   "capa": true
+   "capa": true,
+   "capa_v": "e8572e62",
+   "versao": "5aec02dd",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "fuja-das-tartarugas",
@@ -63,7 +87,11 @@
    "demo": false,
    "genero": "labirinto",
    "perfil": "2600",
-   "capa": true
+   "capa": true,
+   "capa_v": "ff6bd90f",
+   "versao": "ac2cbe21",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "nintendo-esportes",
@@ -72,7 +100,11 @@
    "demo": false,
    "genero": "esporte",
    "perfil": "16a",
-   "capa": true
+   "capa": true,
+   "capa_v": "d7df9b92",
+   "versao": "87dbc1f7",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "ghoste",
@@ -81,16 +113,24 @@
    "demo": false,
    "genero": "aventura",
    "perfil": "16a",
-   "capa": true
+   "capa": true,
+   "capa_v": "d31e87d0",
+   "versao": "02bf5c2e",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "vale-monstrinhos-3d",
    "nome": "Vale dos Monstrinhos (3D)",
    "autor": "🤖 Demo do Fliperama",
    "demo": true,
-   "genero": null,
+   "genero": "plataforma",
    "perfil": null,
-   "capa": true
+   "capa": true,
+   "capa_v": "746609f7",
+   "versao": "1a3af614",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "dinossauro-no-espaco",
@@ -99,43 +139,63 @@
    "demo": false,
    "genero": "plataforma",
    "perfil": "2600",
-   "capa": true
+   "capa": true,
+   "capa_v": "ecfd6fe8",
+   "versao": "11b5c091",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "planeta-aliens-hd",
    "nome": "Planeta dos Aliens (HD)",
    "autor": "🤖 Demo do Fliperama",
    "demo": true,
-   "genero": null,
+   "genero": "plataforma",
    "perfil": null,
-   "capa": true
+   "capa": true,
+   "capa_v": "cd92bd56",
+   "versao": "291ec09b",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "expedicao-aventureiro-16bits",
    "nome": "Expedição do Aventureiro (16 bits)",
    "autor": "🤖 Demo do Fliperama",
    "demo": true,
-   "genero": null,
+   "genero": "plataforma",
    "perfil": null,
-   "capa": true
+   "capa": true,
+   "capa_v": "a8f5fc81",
+   "versao": "0c32a63c",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "reino-cogumelos-phaser",
    "nome": "Reino dos Cogumelos (Phaser)",
    "autor": "🤖 Demo do Fliperama",
    "demo": true,
-   "genero": null,
+   "genero": "plataforma",
    "perfil": null,
-   "capa": true
+   "capa": true,
+   "capa_v": "42ba50dd",
+   "versao": "f3dda99c",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "reino-cogumelos-demo",
    "nome": "Reino dos Cogumelos Gigantes (demo)",
    "autor": "🤖 Demo do Fliperama",
    "demo": true,
-   "genero": null,
+   "genero": "plataforma",
    "perfil": null,
-   "capa": true
+   "capa": true,
+   "capa_v": "92b23ef5",
+   "versao": "bfec2f25",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "robo-no-espaco",
@@ -144,7 +204,11 @@
    "demo": false,
    "genero": "nave",
    "perfil": "16b",
-   "capa": true
+   "capa": true,
+   "capa_v": "074ab946",
+   "versao": "403b1fb2",
+   "orientacao": "em_pe",
+   "modo": ""
   },
   {
    "slug": "vem-pra-cima",
@@ -153,16 +217,24 @@
    "demo": false,
    "genero": "briga_de_rua",
    "perfil": "16b",
-   "capa": true
+   "capa": true,
+   "capa_v": "ab67a417",
+   "versao": "08f34577",
+   "orientacao": "deitado",
+   "modo": ""
   },
   {
    "slug": "gato-em-marte",
    "nome": "Gato em Marte",
    "autor": "🤖 Demo do Fliperama",
    "demo": true,
-   "genero": null,
+   "genero": "plataforma",
    "perfil": null,
-   "capa": true
+   "capa": true,
+   "capa_v": "11ead65b",
+   "versao": "c5d453db",
+   "orientacao": "deitado",
+   "modo": ""
   }
  ]
 }

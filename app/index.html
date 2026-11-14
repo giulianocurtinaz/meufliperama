@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b1a">
+<meta name="description" content="Meu Fliperama — jogos criados por jovens devs. Jogue no celular, sem cadastro.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fliperama">
+<title>Meu Fliperama</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icone-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="app.css?v=2">
+</head>
+<body>
+
+<!-- ═══════════ VITRINE ═══════════ -->
+<section id="vitrine" class="tela on" aria-label="Jogos">
+  <header class="topo">
+    <h1>🕹️ FLIPERAMA</h1>
+    <div class="topoBts">
+      <button type="button" class="chip" id="btTv">📺 Jogar na TV</button>
+      <button type="button" class="chip" id="btPerfil" aria-label="Seu apelido">🙂 <span id="meuAp">sem apelido</span></button>
+    </div>
+  </header>
+  <section id="tvCasa" hidden aria-label="Ligar o celular na TV">
+    <div class="tvTit">📺 Fliperama na TV</div>
+    <div class="tvSub">Pegue o celular, aponte a câmera para o código e escolha o jogo no celular. Ele vira o controle!</div>
+    <div id="tvQr" class="celCorpo tvQr">abrindo a sala…</div>
+    <div class="tvSub">Ou use o controle remoto para escolher um jogo abaixo.</div>
+  </section>
+  <button type="button" id="instalar" hidden>
+    <span class="ic" aria-hidden="true">📲</span>
+    <span><b>Instale no celular</b><br><span id="instTxt">vira um app na tela inicial e abre em tela cheia</span></span>
+  </button>
+  <div class="fichas" id="fichas" role="tablist" aria-label="Gêneros"></div>
+  <main class="rolo" id="rolo">
+    <div class="secao" id="secCont" hidden>Continuar</div>
+    <div class="continuar" id="continuar"></div>
+    <div class="secao" id="tituloLista">Todos os jogos</div>
+    <div id="lista"><p class="nota">carregando os jogos…</p></div>
+    <p class="nota" id="rodape"></p>
+  </main>
+</section>
+
+<!-- ═══════════ JOGO ═══════════ -->
+<section id="jogo" class="tela" aria-label="Jogo">
+  <div id="palco"></div>
+  <div id="ctl" aria-hidden="true"></div>
+  <div id="anel" aria-hidden="true"><i></i></div>
+  <span id="tvSelo" hidden></span>
+  <div id="hud">
+    <button type="button" id="btCel" class="hudbt" hidden aria-label="Usar o celular como controle">📱</button>
+    <button type="button" id="btPausa" class="hudbt" aria-label="Pausa">⏸</button>
+  </div>
+  <div id="comecar" class="veuJogo">
+    <div class="caixaComecar">
+      <b id="cmNome"></b>
+      <span id="cmDesafio" hidden></span>
+      <button type="button" id="btComecar" class="grande">▶ Jogar</button>
+      <span class="dica" id="cmDica"></span>
+    </div>
+  </div>
+  <div id="gire" class="veuJogo">
+    <div class="ic" aria-hidden="true">📱</div>
+    <b id="gireTxt">Gire o celular</b>
+    <span class="sub">o jogo continua assim que você girar</span>
+    <button type="button" class="chip" id="gireSair">← voltar aos jogos</button>
+  </div>
+  <div id="carregando" class="veuJogo"><span>carregando o jogo…</span></div>
+</section>
+
+<!-- ═══════════ FOLHAS ═══════════ -->
+<div class="veu" id="vPausa" role="dialog" aria-modal="true" aria-labelledby="tPausa"><div class="folha">
+  <h2 id="tPausa">⏸ Pausa</h2>
+  <div class="lista"><button type="button" id="pContinuar">▶ Continuar</button><button type="button" id="pRecomecar">↻ Recomeçar</button></div>
+  <div id="pControles"></div>
+  <div class="grupo">Conforto</div>
+  <div class="opcao"><span>Tamanho dos botões</span><div class="seg" id="segTam"><button type="button" data-v="0.8">P</button><button type="button" data-v="1">M</button><button type="button" data-v="1.25">G</button></div></div>
+  <div class="opcao"><span>Botões</span><div class="seg" id="segAlfa"><button type="button" data-v="0.16">claros</button><button type="button" data-v="0.3">fortes</button></div></div>
+  <div class="opcao"><span>Mão</span><div class="seg" id="segMao"><button type="button" data-v="d">destro</button><button type="button" data-v="c">canhoto</button></div></div>
+  <div class="opcao"><span>Som</span><div class="seg" id="segSom"><button type="button" data-v="1">ligado</button><button type="button" data-v="0">mudo</button></div></div>
+  <div class="opcao" id="linVibrar"><span>Vibrar</span><div class="seg" id="segVib"><button type="button" data-v="1">sim</button><button type="button" data-v="0">não</button></div></div>
+  <div class="lista" style="margin-top:12px"><button type="button" id="pSair">← Sair do jogo</button></div>
+</div></div>
+
+<div class="veu" id="vFim" role="dialog" aria-modal="true" aria-labelledby="fimTit"><div class="folha">
+  <h2 id="fimTit">Fim de jogo</h2>
+  <div class="pts" id="fimPts">0</div>
+  <div class="recorde" id="fimRec"></div>
+  <div id="fimPlacar" hidden>
+    <label class="rot" for="inAp">Seu apelido no placar (nada de nome de verdade)</label>
+    <input class="ap" id="inAp" maxlength="12" placeholder="SEU APELIDO" autocomplete="off" autocapitalize="characters" spellcheck="false">
+    <div id="tsBox"></div>
+    <div class="msg" id="apMsg"></div>
+    <button type="button" class="grande" id="fPlacar">🏆 Pôr no placar</button>
+  </div>
+  <div class="msg" id="fimAviso"></div>
+  <button type="button" class="grande alt" id="fNovo">↻ Jogar de novo</button>
+  <div class="linha">
+    <button type="button" class="meio" id="fAmigo">📤 Desafiar amigo</button>
+    <button type="button" class="meio" id="fVerPlacar">📋 Placar</button>
+  </div>
+  <div class="lista"><button type="button" id="fSair">← Voltar aos jogos</button></div>
+</div></div>
+
+<div class="veu" id="vPlacar" role="dialog" aria-modal="true" aria-labelledby="plTit"><div class="folha">
+  <h2 id="plTit">📋 Placar</h2>
+  <div class="seg abas" id="plModos"></div>
+  <table class="placar" id="plTab"></table>
+  <p class="nota" id="plNota"></p>
+  <div class="lista"><button type="button" id="plFechar">Fechar</button></div>
+</div></div>
+
+<div class="veu" id="vApelido" role="dialog" aria-modal="true" aria-labelledby="apTit"><div class="folha">
+  <h2 id="apTit">🙂 Seu apelido</h2>
+  <p class="sub">Invente um apelido (nada de nome de verdade). Fica guardado só neste celular.</p>
+  <input class="ap" id="inAp2" maxlength="12" placeholder="SEU APELIDO" autocomplete="off" autocapitalize="characters" spellcheck="false">
+  <div class="msg" id="apMsg2"></div>
+  <div class="linha"><button type="button" class="meio" id="ap2Nao">Cancelar</button><button type="button" class="meio grande" id="ap2Ok">Salvar</button></div>
+</div></div>
+
+<div class="veu" id="vInstalar" role="dialog" aria-modal="true" aria-labelledby="inTit"><div class="folha">
+  <h2 id="inTit">📲 Instalar no iPhone</h2>
+  <ol class="passos">
+    <li>Toque em <b>Compartilhar</b> <span class="ico">⬆</span> na barra do Safari.</li>
+    <li>Role e toque em <b>Adicionar à Tela de Início</b>.</li>
+    <li>Toque em <b>Adicionar</b>. O Fliperama vira um app, em tela cheia.</li>
+  </ol>
+  <div class="lista"><button type="button" id="inFechar">Entendi</button></div>
+</div></div>
+
+<div class="veu" id="vLigar" role="dialog" aria-modal="true" aria-labelledby="ligTit"><div class="folha">
+  <h2 id="ligTit">📺 Jogar na TV</h2>
+  <ol class="passos">
+    <li>Na TV, abra o Fliperama: <b id="ligEnd">jogar.meufliperama.com.br</b> (ou o Fliperama de casa).</li>
+    <li>Aponte a câmera do celular para o código da TV — ou digite os 4 números aqui:</li>
+  </ol>
+  <label class="rot" for="ligCod">Código da TV</label>
+  <input class="ap" id="ligCod" inputmode="numeric" maxlength="6" placeholder="0000" autocomplete="off">
+  <div class="msg" id="ligMsg"></div>
+  <button type="button" class="grande" id="ligOk">Ligar na TV</button>
+  <p class="sub">Depois é só escolher o jogo aqui no celular: ele abre na TV e o celular vira o controle. Um segundo celular pode entrar como jogador 2 com o mesmo código.</p>
+  <div class="linha"><button type="button" class="meio" id="ligDesl" hidden>Desligar da TV</button><button type="button" class="meio" id="ligFechar">Fechar</button></div>
+</div></div>
+
+<div class="veu" id="vCel" role="dialog" aria-modal="true" aria-labelledby="celTit"><div class="folha">
+  <h2 id="celTit">📱 Celular como controle</h2>
+  <div id="celCorpo" class="celCorpo"></div>
+  <div class="lista"><button type="button" id="celFechar">Fechar</button></div>
+</div></div>
+
+<div id="aviso" role="status" aria-live="polite"></div>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>

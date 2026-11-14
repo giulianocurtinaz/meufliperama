@@ -48,6 +48,7 @@
     }
     var entrada = null, antesRobo = {}, cena = null, quebrado = null;
     var her = spec.heroi || {};
+    var jg = F.jogabilidade ? F.jogabilidade(spec, opcoes.jogabilidade || {}) : { regras: {}, livres: {}, modo: '' }, jgRegras = jg.regras;
 
     // ───────── 🎨 ESTILOS por fase (25/10/2026): "pixel" (o desenho da era), "turbinado" (o mesmo desenho ampliado
     // com Scale2x×2 e suavizado) e "hd" (a biblioteca HD da casa, CC0). A lógica é a mesma: só o desenho muda. ─────────
@@ -603,7 +604,7 @@
         while (this.acum >= I.PASSO) {
           var inp;
           if (robo) { var e = robo(); inp = I.entradaDe(e, antesRobo); antesRobo = e; } else { inp = entrada ? entrada.ler() : I.entradaDe({}, {}); }
-          jogo.atualizar(inp);
+          jogo.atualizar(robo || !F._aplicarModo ? inp : F._aplicarModo(jogo, inp, jgRegras));   // 🎮 13/11: regras de jogabilidade
           this.acum -= I.PASSO;
         }
         if (jogo.fase && jogo.estado !== 'titulo') { this.desenharMundo(); if (this.est === '3d' && m3) { m3.quadro(jogo, sprites, this.est); } }
@@ -638,7 +639,7 @@
     window.addEventListener('resize', escalar);
     if (window.ResizeObserver) { var largVista = 0; new ResizeObserver(function () { var lw = Math.round(raiz.getBoundingClientRect().width); if (lw && lw !== largVista) { largVista = lw; escalar(); } }).observe(raiz); }   // 📐
     return {
-      jogo: jogo, versao: VERSAO, aceitaDois: false,
+      jogo: jogo, versao: VERSAO, aceitaDois: false, jogabilidade: jg,
       controle: function (slot, est) { if (entrada) { entrada.definirRemoto(slot, est || {}); } },
       doisJogadores: function () { return false; },
       pausar: function (s) { if (jogo.pausar) { jogo.pausar(s); } },
